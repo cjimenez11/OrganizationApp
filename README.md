@@ -21,6 +21,7 @@
 |  Hruthika Saripalli  |  hsaripalli@sfsu.edu      |       hru952     |   Team Leader   |
 |  Hansley Wijaya      |  hwijaya@sfsu.edu         |    hwijayasfsu   |                 |
 |  Christian Francisco |  cfrancisco@mail.sfsu.edu |     chrisf725    |                 |
+|  Iza Limcolioc       |  ilimcolioc@sfsu.edu      |    ilimcolioc    |   Scrum Master  |
 
 **NO code should be stored in the root of your repository. You may rename the
 `application/` folder to your team's application name if you'd like, but all the
