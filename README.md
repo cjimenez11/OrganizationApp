@@ -18,7 +18,7 @@
 
 |  Student Name        |  Student Email            |  GitHub Username |  Student's role |
 | :------------------: | :-----------------------: | :--------------: | :-------------: |
-|  John Doe            |  jdoe@sfsu.edu            |       jdoe       |   Team Leader   |
+|  Hruthika Saripalli  |  hsaripalli@sfsu.edu      |       hru952     |   Team Leader   |
 |  Hansley Wijaya      |  hwijaya@sfsu.edu         |    hwijayasfsu   |                 |
 |  Christian Francisco |  cfrancisco@mail.sfsu.edu |     chrisf725    |                 |
 
