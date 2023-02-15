@@ -23,6 +23,7 @@
 |  Christian Francisco |  cfrancisco@mail.sfsu.edu |     chrisf725    |                 |
 |  Iza Limcolioc       |  ilimcolioc@sfsu.edu      |    ilimcolioc    |   Scrum Master  |
 |  Tay Truong          |  ttruong12@sfsu.edu       |    tatruong1     |                 |
+
 **NO code should be stored in the root of your repository. You may rename the
 `application/` folder to your team's application name if you'd like, but all the
 source code should be stored inside that folder.**
