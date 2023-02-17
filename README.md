@@ -24,6 +24,7 @@
 |  Iza Limcolioc       |  ilimcolioc@sfsu.edu      |    ilimcolioc    |   Scrum Master  |
 |  Tay Truong          |  ttruong12@sfsu.edu       |    tatruong1     |                 |
 |  Carlos Jimenez      |  cjimenez11@mail.sfsu.edu |    cjimenez11    |  Front End Lead |
+|  Malavya Raval       |  mraval@sfsu.edu          |    Malavya-Raval    |   |
 
 **NO code should be stored in the root of your repository. You may rename the
 `application/` folder to your team's application name if you'd like, but all the
