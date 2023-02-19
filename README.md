@@ -19,11 +19,11 @@
 |  Student Name        |  Student Email            |  GitHub Username |  Student's role |
 | :------------------: | :-----------------------: | :--------------: | :-------------: |
 |  Hruthika Saripalli  |  hsaripalli@sfsu.edu      |       hru952     |   Team Leader   |
-|  Hansley Wijaya      |  hwijaya@sfsu.edu         |    hwijayasfsu   |                 |
+|  Hansley Wijaya      |  hwijaya@sfsu.edu         |    hwijayasfsu   |   Backend Lead  |
 |  Christian Francisco |  cfrancisco@mail.sfsu.edu |     chrisf725    |                 |
 |  Iza Limcolioc       |  ilimcolioc@sfsu.edu      |    ilimcolioc    |   Scrum Master  |
 |  Tay Truong          |  ttruong12@sfsu.edu       |    tatruong1     |                 |
-|  Carlos Jimenez      |  cjimenez11@mail.sfsu.edu |    cjimenez11    |  Front End Lead |
+|  Carlos Jimenez      |  cjimenez11@mail.sfsu.edu |    cjimenez11    |Git master, Frontend Lead |
 |  Malavya Raval       |  mraval@sfsu.edu          |    Malavya-Raval    |   |
 
 **NO code should be stored in the root of your repository. You may rename the
