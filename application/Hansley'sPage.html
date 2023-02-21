@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header{
+	            display: flex;
+                justify-content: center;
+	            justify-items: center
+            }
+            .content {
+                display:flex;
+                text-align: center;
+                margin-left: 200px;
+            }
+            #aboutpic{/*aligns about picture right and covers 50% of width*/
+                right: 0px;
+                max-width:50%;
+                height: auto;
+            }
+            .aboutinfo{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+            }
+            /*sidebar css*/
+            .sidebar {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 200px;
+                overflow: auto;
+                position: fixed;
+                background-color: #cccccc;
+                top:0px;
+                bottom:0px;
+                left: 0px;
+                justify-content: center;
+            }
+            .sidebar a {
+                flex: 0 0 20px;
+                display: block;
+                background-color: #aaaaaa;
+                color:black;
+                text-decoration: none;
+                text-align: center;
+                bottom:0px;
+                padding: 20px 0px;
+            }
+            #return{/*return button autosizes*/
+                flex: 1 1 auto;
+                padding: 50% 0%;
+                top:0px;
+                height: 0px;
+            }
+            .sidebar a.active {
+                background-color: #51b7ff;
+            }
+            .sidebar a:hover:not(a.active) {
+                background-color: #404040;
+                color:white;
+            }
+            /*sidebar end*/
+            /*mobile screen formatting*/
+            @media screen and (max-width: 400px){
+                .sidebar{
+                    width: 100%;
+                    height: 200px;
+                    bottom: 0px;
+                    top: auto;
+                }
+                .sidebar a {
+                    height: 20px;
+                    padding: 5px;
+                }
+                #return{
+                    height: 20px;
+                    padding: 5px;
+                }
+                .content{
+                    flex-direction: column-reverse;
+                    margin-left: 0px;
+                }
+                #aboutpic{
+                    width:100%;
+                    max-width:100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Hansley Wijaya</h1>
+        </header>
+        <div class="content">
+            <div class="aboutinfo">
+                <h5 id="role">Back-End Programmer, Panda Enthusiast</h5>
+                <h6>
+                    The back-end lead for this task management site, experienced with Node and Express.
+                    Learned in html, python, java, c++, and sql.
+                    I enjoy a wide variety of games, including action, strategy, or roleplay.
+                    Pandas are the cutest and I'd like to make my own panda A.I.
+                </h6>
+            </div>
+            <img id="aboutpic" src="pics/panda.jpg" alt="Placeholder Image">
+        </div>
+        <div class="sidebar">
+            <a id="return" href="">Return</a> <!--returns to main about page or home page, replaceable-->
+            <a href="">Hruthika's About Page</a>
+            <a href="hansley.html">Hansley's About Page</a>
+            <a href="">Carlos' About Page</a>
+            <a href="">Malavya's About Page</a>
+            <a href="Christian'sPage.html">Christian's About Page</a>
+            <a href="tayabout.html">Tay's About Page</a>
+            <a href="">Iza's About Page</a>
+        </div>
+    </body>
+</html>
