@@ -183,7 +183,7 @@ function App() {
             columnNumber: 21
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("img", {
             class: "photo",
-            src: "/iza'sphoto.jpg",
+            src: "/application/pics/iza'sphoto.jpg",
             alt: "me"
           }, void 0, false, {
             fileName: _jsxFileName,
