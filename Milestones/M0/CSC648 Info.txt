@@ -1,3 +1,0 @@
-DB username: csc645-sec04-team01
-DB Pass: Csc645-Sp3-Sec04-Team01
-DB url: mongodb+srv://csc645-sec04-team01:Csc645-Sp3-Sec04-Team01@lineupapp.nzbpzvj.mongodb.net/LineUpApp?retryWrites=true&w=majority
