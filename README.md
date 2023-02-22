@@ -1,6 +1,6 @@
-# CSC648-spring23-SectionName-teamNN Repository
+# CSC648-spring23-04-Team01 Repository
 
-**Application URL: <https://example.com>**
+**Application URL: <http://mylineup.online/>**
 
 ## Before completing Milestone 0
 
