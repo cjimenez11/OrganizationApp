@@ -93,42 +93,42 @@ function App() {
       children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("div", {
         class: "sidebar",
         children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "",
+          href: "/application/Hruthika'sPage.html",
           children: "Hruthika's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 24,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "",
+          href: "/application/Hansley'sPage.html",
           children: "Hansley's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 25,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "",
+          href: "/application/CarlosPage.html",
           children: "Carlos' About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 26,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "",
+          href: "/application/Malavya'sPage.html",
           children: "Malavya's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 27,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "test.html",
+          href: "/application/Christian'sPage.html",
           children: "Christian's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 28,
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
-          href: "tayabout.html",
+          href: "/application/Tay'sPage.html",
           children: "Tay's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
@@ -136,7 +136,7 @@ function App() {
           columnNumber: 9
         }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("a", {
           class: "active",
-          href: "iza'spage.html",
+          href: "/application/Iza'sPage.html",
           children: "Iza's About Page"
         }, void 0, false, {
           fileName: _jsxFileName,
@@ -183,7 +183,7 @@ function App() {
             columnNumber: 21
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)("img", {
             class: "photo",
-            src: "/iza'sphoto.jpg",
+            src: "pics/iza'sphoto.jpg",
             alt: "me"
           }, void 0, false, {
             fileName: _jsxFileName,
