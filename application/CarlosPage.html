@@ -12,6 +12,34 @@
                 background: url(https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
                 background-size: cover;
             }
+            .sidebar {
+                height: 100%;
+                width: 250px;
+                overflow: auto;
+                position: fixed;
+                background-color: #cccccc;
+                top: 0px;
+                left: 0px;
+                padding-top: 75px;
+            }
+            .sidebar a {
+                height: 50px;
+                /*border: 1px black solid;/**/
+                display: block;
+                background-color: #aaaaaa;
+                color:black;
+                text-decoration: none;
+                text-align: center;
+                padding-top: 25px;
+            }
+            .sidebar a.active {
+                background-color: #51b7ff;
+
+            }
+            .sidebar a:hover:not(a.active) {
+                background-color: #404040;
+                color:white;
+            }
             .box{
                 width:450px;
                 background-color: rgba(0,0,0,0.6);
@@ -59,8 +87,18 @@
         <title>About Carlos</title>
     </head>
     <body>
+        <div class="sidebar">
+            <!--On diff html files, diff links have the 'active' class-->
+            <a href="/application/Hruthika'sPage.html">Hruthika's About Page</a>
+            <a href="/application/Hansley'sPage.html">Hansley's About Page</a>
+            <a class ="active" href="/application/CarlosPage.html">Carlos' About Page</a>
+            <a href="/application/Malavya'sPage.html">Malavya's About Page</a>
+            <a href="/application/Christian'sPage.html">Christian's About Page</a>
+            <a href="/application/Tay'sPage.html">Tay's About Page</a>
+            <a href="/application/Iza'sPage.html">Iza's About Page</a>
+        </div>
         <div class="box">
-            <img src="My pic for Classes 2022.png" alt="" class="box-img">
+            <img src="pics/My pic for Classes 2022.png" alt="" class="box-img">
             <h1>Carlos Jimenez</h1>
             <h3>Front End Lead</h3>
             <p>Hello, I am the front end lead of the team. I love to find new
