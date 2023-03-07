@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            body{
+                margin:0px;
+            }
             header{
+                margin-left:200px;
 	            display: flex;
                 justify-content: center;
 	            justify-items: center
@@ -69,6 +73,8 @@
                     height: 200px;
                     bottom: 0px;
                     top: auto;
+                    overflow: visible;
+                    position: static;
                 }
                 .sidebar a {
                     height: 20px;
@@ -77,6 +83,9 @@
                 #return{
                     height: 20px;
                     padding: 5px;
+                }
+                header{
+                    margin-left:0px;
                 }
                 .content{
                     flex-direction: column-reverse;
@@ -96,18 +105,18 @@
         </header>
         <div class="content">
             <div class="aboutinfo">
-                <h5 id="role">Back-End Programmer, Panda Enthusiast</h5>
-                <h6>
+                <h4 id="role" style="background-color:black;color:white;">Back-End Programmer, Panda Enthusiast</h4>
+                <h5>
                     The back-end lead for this task management site, experienced with Node and Express.
                     Learned in html, python, java, c++, and sql.
                     I enjoy a wide variety of games, including action, strategy, or roleplay.
                     Pandas are the cutest and I'd like to make my own panda A.I.
-                </h6>
+                </h5>
             </div>
             <img id="aboutpic" src="pics/panda.jpg" alt="Placeholder Image">
         </div>
         <div class="sidebar">
-            <a id="return" href="/application/about.html">Return</a> <!--returns to main about page or home page, replaceable-->
+            <a id="return" href="about.html">Return</a> <!--returns to main about page or home page, replaceable-->
             <a href="/application/Hruthika'sPage.html">Hruthika's About Page</a>
             <a href="/application/Hansley'sPage.html">Hansley's About Page</a>
             <a href="/application/CarlosPage.html">Carlos' About Page</a>
