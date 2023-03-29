@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="#"></script>
+</head>
+<body>
+    <div class="register-body">
+        <header>
+            <h1 class="registration-header">Register Here</h1>
+        </header>
+        <form class="grid-container-reg" method="POST" action="login.html" enctype="application/x-www-form-urlencoded">
+            <label for="username" class="text-label">Please create Username</label>
+            <input id="username" class="text-label" type="text" placeholder="Username" name="username" required />
+            <br />
+            <label for="email" class="text-label">Enter a valid Email</label>
+            <input id="email" class="text-label" type="email" placeholder="Email" name="email" required />
+            <br />
+            <label for="password" class="text-label">Create a Password</label>
+            <input id="password" type="text" placeholder="Password" name="password" required />
+            <br />
+            <label for="password" class="text-label">Confirm your Password</label>
+            <input id="password-confirm" type="text" placeholder="Password" name="cpassword" required />
+            <br />
+            <br />
+            <footer class="registration-footer">
+                <input type="checkbox" required /> Check here if older than 13
+    
+                <br />
+                <a href="">TOS and Privacy Rules</a>
+                <br />
+                <button>Register</button>
+            </footer>
+        </form>
+    </div>
+
+</body>
