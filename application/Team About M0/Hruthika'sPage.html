@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hruthika's profile</title>
+        <style>
+            body{
+                background-color: rgb(190, 182, 182);
+            }
+            .sidebar {
+                height: 100%;
+                width: 250px;
+                overflow: auto;
+                position: fixed;
+                background-color: #cccccc;
+                top: 0px;
+                left: 0px;
+                padding-top: 75px;
+            }
+            .sidebar a {
+                height: 50px;
+                /*border: 1px black solid;/**/
+                display: block;
+                background-color: #aaaaaa;
+                color:black;
+                text-decoration: none;
+                text-align: center;
+                padding-top: 25px;
+            }
+            .sidebar a.active {
+                background-color: #51b7ff;
+
+            }
+            .sidebar a:hover:not(a.active) {
+                background-color: #404040;
+                color:white;
+            }
+            .hruabt{
+                color: rgb(134, 12, 52);
+                border-radius: 30px;
+                width: 250px;
+                background-color: #51b7ff;
+                text-shadow: 5px 5px 5px 5px rgb(153, 62, 227);
+                text-align: center;  
+                position: fixed;
+                left: 53%;
+                top: 34%; 
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 220px;
+                height: 260px;
+                position: fixed;
+                left: 33%;
+                top: 38%; 
+            }
+            .hrudec{
+                color: rgb(134, 12, 52);
+                border-radius: 30px;
+                width: 280px;
+                background-color: #51b7ff;
+                text-shadow: 5px 5px 5px 5px rgb(153, 62, 227);
+                text-align: center;  
+                padding: 30px;
+                position: fixed;
+                left: 50%;
+                top: 44%;  
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <!--On diff html files, diff links have the 'active' class-->
+            <a class="active" href="">Hruthika's About Page</a>
+            <a href="/application/Hansley'sPage.html">Hansley's About Page</a>
+            <a href="/application/CarlosPage.html">Carlos' About Page</a>
+            <a href="/application/Malavya'sPage.html">Malavya's About Page</a>
+            <a href="/application/Christian'sPage.html">Christian's About Page</a>
+            <a href="/application/Tay'sPage.html">Tay's About Page</a>
+            <a href="/application/Iza'sPage.html">Iza's About Page</a>
+        </div>
+        <h1 class="hruabt">Hruthika's Profile</h1>
+        <p class="hrudec">
+            Name: Hruthika Saripalli<br>
+            Role: Team Lead<br>
+            Major: Data Science and AI (MS)<br>
+        </p>
+    </body>
