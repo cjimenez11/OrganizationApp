@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+                background-color:#dddddd
+            }
+            /*sidebar css*/
+            .sidebar {
+                height: 100%;
+                width: 250px;
+                overflow: auto;
+                position: fixed;
+                background-color: #cccccc;
+                top: 0px;
+                left: 0px;
+                padding-top: 75px;
+            }
+            .sidebar a {
+                height: 50px;
+                /*border: 1px black solid;/**/
+                display: block;
+                background-color: #aaaaaa;
+                color:black;
+                text-decoration: none;
+                text-align: center;
+                padding-top: 25px;
+            }
+            .sidebar a.active {
+                background-color: #51b7ff;
+
+            }
+            .sidebar a:hover:not(a.active) {
+                background-color: #404040;
+                color:white;
+            }
+            /*sidebar end*/
+
+            .content {
+                text-align: center;
+                margin-left: 250px;
+            }
+            .flexbox {
+                display: flex;
+                /*background-color: red;/**/
+                height: 100%;
+                align-items: center;
+                overflow:auto;
+            }
+            .flexbox > div {
+                /*background-color: #51b7ff;/**/
+                margin: 10px;
+                padding: 20px;
+            }
+            .sesame {
+                height:auto;
+                max-width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <!--On diff html files, diff links have the 'active' class-->
+            <a href="/application/Hruthika'sPage.html">Hruthika's About Page</a>
+            <a href="/application/Hansley'sPage.html">Hansley's About Page</a>
+            <a href="/application/CarlosPage.html">Carlos' About Page</a>
+            <a href="/application/Malavya'sPage.html">Malavya's About Page</a>
+            <a href="/application/Christian'sPage.html">Christian's About Page</a>
+            <a class="active" href="/application/Tay'sPage.html">Tay's About Page</a>
+            <a href="/application/Iza'sPage.html">Iza's About Page</a>
+        </div>
+        <div class="content">
+            <div class="flexbox">
+                <div style="flex-shrink: 0;">
+                    <!--Change path if needed-->
+                    <img class="sesame" src="pics/blackSesameSoup.jpg" alt="dessert">
+                </div>
+                <div style="flex-grow: 2;">
+                    <h1>About Me</h1>
+                    <h2>Tay Truong</h2>
+                    <h4>Programmer, likes desserts</h4>
+                    <p>
+                        Here to learn how to work together in a team, replicating a small company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
