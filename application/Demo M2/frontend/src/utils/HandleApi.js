@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const baseUrl = "http://localhost:5000"
+// To test locally, change baseUrl to http://localhost:5000
+const baseUrl = "/api"
 const getAllToDo = (setToDo) => {
     axios
         .get(baseUrl)

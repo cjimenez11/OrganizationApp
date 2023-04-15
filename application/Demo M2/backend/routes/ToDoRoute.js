@@ -4,12 +4,14 @@ const {getToDo, saveToDo, deleteToDo, updateToDo} = require("../controllers/ToDo
 
 const router = Router()
 
-router.get("/", getToDo);
+// To test locally, remove the api in the first parameter
+// Ex. "/", "/save", "/update", "/delete"
+router.get("/api", getToDo);
 
-router.post("/save", saveToDo);
+router.post("/api/save", saveToDo);
 
-router.post("/update", updateToDo);
+router.post("/api/update", updateToDo);
 
-router.post("/delete", deleteToDo);
+router.post("/api/delete", deleteToDo);
 
 module.exports = router;
