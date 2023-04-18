@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Relaxer App</title>
+</head>
+<body>
+    <div class="input">
+        <label>Choose a Relaxer</label>
+        <select class="breath-input">
+            <option value="2">2 Breath Relaxer</option>
+            <option value="4">4 Breath Relaxer</option>
+            <option value="6">6 Breath Relaxer</option>
+            <option value="8">8 Breath Relaxer</option>
+            <option value="10">10 Breath Relaxer</option>
+        </select>
+    </div>
+    <div class="circle-wrap">
+        <div class="circle-outline"></div>
+        <div class="circle-progress"></div>
+    </div>
+    <p class="breaths">Breaths left: <span class="breaths-text">2</span></p>
+    <p class="instructions2">Play some music to set the mood</p>
+    <audio controls>
+        <source src="audio/meditation.mp3" type="audio/mpeg">
+    </audio>
+    <p class="instructions">Time to relax - Are you ready?</p>
+    <button class="start">Start</button>
+    <script src="app.js"></script>
+</body>
+</html>

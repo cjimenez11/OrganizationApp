@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Nanum+Pen+Script&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #dad4ec;
+    background: url('calm.jpg');
+    background-size: cover;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: -1;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.input label {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.input select {
+    border: none;
+    border-radius: 8px;
+    min-width: 300px;
+    font-size: 20px;
+    padding: 8px 4px;
+    background-color: #62AAC0ff;
+    color: white;
+}
+
+.input select:focus {
+    outline: none;
+}
+
+.circle-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.circle-outline {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 15px solid #FAEBD8ff;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.circle-progress {
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    background-color: #EEB7A2ff;
+    border-radius: 50%;
+    transition: 4s ease all;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.circle-growth {
+    transform: scale(5.3);
+}
+
+.breaths {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: 120px;
+    font-size: 20px;
+    position: absolute;
+    color: white;
+}
+
+.instructions2 {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #62AAC0ff;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+
+button:hover {
+    background-color: lightgray;
+    color: #3591BAff;
+}
+
+.button-inactive {
+    pointer-events: none;
+    background-color: lightslategray;
+}
+
+audio {
+    width: 190px;
+    height: 50px;
+    margin: 1%;
+    border:10px solid #dad4ec;
+    border-radius: 50px;
+}
