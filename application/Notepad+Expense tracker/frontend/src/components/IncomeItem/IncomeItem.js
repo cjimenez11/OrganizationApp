@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { dateFormat } from '../../utils/dateFormat';
-import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
+//import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
 import Button from '../Button/Button';
+import { DeleteIcon, CalendarIcon, ChatIcon } from '@chakra-ui/icons';
+import { CashIcon, LogoUsdIcon } from 'chakra-ui-ionicons';
+
 
 function IncomeItem({
     id,
@@ -19,21 +22,21 @@ function IncomeItem({
     const categoryIcon = () =>{
         switch(category) {
             case 'salary':
-                return money;
+                return <CashIcon/>;
             case 'freelancing':
-                return freelance
+                return <CashIcon/>;
             case 'investments':
-                return stocks;
+                return <CashIcon/>;
             case 'stocks':
-                return users;
+                return <CashIcon/>;
             case 'bitcoin':
-                return bitcoin;
+                return <CashIcon/>;
             case 'bank':
-                return card;
+                return <CashIcon/>;
             case 'youtube':
-                return yt;
+                return <CashIcon/>;
             case 'other':
-                return piggy;
+                return <CashIcon/>;
             default:
                 return ''
         }
@@ -42,21 +45,21 @@ function IncomeItem({
     const expenseCatIcon = () => {
         switch (category) {
             case 'education':
-                return book;
+                return <CashIcon/>;
             case 'groceries':
-                return food;
+                return <CashIcon/>;
             case 'health':
-                return medical;
+                return <CashIcon/>;
             case 'subscriptions':
-                return tv;
+                return <CashIcon/>;
             case 'takeaways':
-                return takeaway;
+                return <CashIcon/>;
             case 'clothing':
-                return clothing;
+                return <CashIcon/>;
             case 'travelling':
-                return freelance;
+                return <CashIcon/>;
             case 'other':
-                return circle;
+                return <CashIcon/>;
             default:
                 return ''
         }
@@ -73,16 +76,16 @@ function IncomeItem({
                 <h5>{title}</h5>
                 <div className="inner-content">
                     <div className="text">
-                        <p>{dollar} {amount}</p>
-                        <p>{calender} {dateFormat(date)}</p>
+                        <p>{<LogoUsdIcon />} {amount}</p>
+                        <p>{<CalendarIcon />} {dateFormat(date)}</p>
                         <p>
-                            {comment}
+                            {<ChatIcon />}
                             {description}
                         </p>
                     </div>
                     <div className="btn-con">
                         <Button 
-                            icon={trash}
+                            icon={<DeleteIcon />}
                             bPad={'1rem'}
                             bRad={'50%'}
                             bg={'var(--primary-color'}

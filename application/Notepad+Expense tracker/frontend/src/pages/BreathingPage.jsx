@@ -1,7 +1,9 @@
 import {Flex} from "@chakra-ui/react";
+import "../relax.css";
+
 
 //var breath = require('C:\Users\cjime\CSC648-TermProject sp2023\csc648-spring23-04-team01\application\Relaxer\breathingApp.html')
-export default function BreathingApp(){
+function BreathingApp(){
     
 
     const styles = {
@@ -186,64 +188,105 @@ export default function BreathingApp(){
         }
       }
     return <>
-         <div style={{ textAlign: "center" }}>
-    <button className="toggleRelax" style={styles.button}>Switch</button>
+    <meta charSet="utf-8" />
+  <title>Relaxer</title>
+
+  <style
+    dangerouslySetInnerHTML={{
+      __html:
+        "\n            /*internal stylesheet overrides external stylesheets*/\n            html {\n                height: 100%;\n            }\n            body {\n            /*#866aa3 -> #7f84be*/\n            /*background-color: transparent;\n            background-image: linear-gradient(to right,#866aa3 33%,#7f84be 66%);*/\n            }\n        "
+    }}
+  />
+  {/*how to find direct mp3 urls: type "intitle:index.of?mp3 [song title]" into google*/}
+  <div style={{ textAlign: "center" }}>
+    <button className="toggleRelax">Switch</button>
   </div>
-  <div id="relaxContentsFlexbox" style={styles["#relaxContentsFlexbox"]}>
+  <div id="relaxContentsFlexbox">
     <div style={{ marginLeft: "auto", marginRight: "auto" }}>
       <div id="relax-wrapper1" style={{ display: "none" }}>
-        <div className="relax-input" style={styles[".relax-input"]}>
+        <div className="relax-input">
           <select className="breath-input">
             <option value={3}>3 Breaths</option>
             <option value={5}>5 Breaths</option>
           </select>
         </div>
-        <div className="circle-wrap" style={styles[".circle-wrap"]}>
-          <div className="circle-outline" style={styles[".circle-outline"]}/>
-          <div className="circle-progress" style={styles[".circle-progress"]}/>
+        <div className="circle-wrap">
+          <div className="circle-outline" />
+          <div className="circle-progress" />
         </div>
-        <p className="breaths" style={styles[".breaths"]}>
+        <p className="breaths">
           Breaths remaining: <span className="breaths-text">3</span>
         </p>
-        <p className="instructions" style={styles[".instructions"]}>Are you ready to start breathing?</p>
+        <p className="instructions">Are you ready to start breathing?</p>
         <div style={{ textAlign: "center" }}>
           <button className="breathStart">Start</button>
         </div>
       </div>
-      <div id="relax-wrapper2" style={styles["#relax-wrapper2"]} >
-        <div className="circle2" style={styles[".circle2"]}/>
-        <div id="relaxText2" style={styles["#relaxText2"]}/>
-        <div className="relax-pointer-container" style={styles[".relax-pointer-container"]}>
-          <div className="relax-pointer" style={styles[".relax-pointer"]}/>
+      <div id="relax-wrapper2" style={{ display: "flex" }}>
+        <div className="circle2" />
+        <div id="relaxText2" />
+        <div className="relax-pointer-container">
+          <div className="relax-pointer" />
         </div>
-        <div className="relax-gradient-circle" style={styles[".relax-gradient-circle"]}/>
+        <div className="relax-gradient-circle" />
       </div>
     </div>
   </div>
-  
+  <div id="topNavFlexbox">
+    <p style={{ textAlign: "center" }}>
+      White noise :{" "}
+      <audio
+        id="audio-control1"
+        controls=""
+        style={{ marginLeft: "auto", marginRight: 0 }}
+        src="audio/White_noise.mp3"
+        type="audio/mpeg"
+      />
+    </p>
+    <p style={{ textAlign: "center" }}>
+      Meditate/Focus:{" "}
+      <audio
+        id="audio-control2"
+        controls=""
+        style={{ marginLeft: "auto", marginRight: 0 }}
+        src="audio/meditation.mp3"
+        type="audio/mpeg"
+      />
+    </p>
+    <p style={{ textAlign: "center" }}>
+      Motivational :{" "}
+      <audio
+        id="audio-control2"
+        controls=""
+        style={{ marginLeft: "auto", marginRight: 0 }}
+        src="audio/stress_relieve_music.mp3"
+        type="audio/mpeg"
+      />
+    </p>
+  </div>
   {/* Slideshow container */}
-  <div className="slideshow-container" style={styles[".slideshow-container"]}>
+  <div className="slideshow-container">
     {/*GIFS w/ numbering and caption text */}
     <div className="Slidefade">
-      <div className="numbertext" style={styles[".numbertext"]}>1 / 4</div>
+      <div className="numbertext">1 / 4</div>
       <img
         src="https://cdn.dribbble.com/users/919329/screenshots/2796076/media/05715cb3ea596b61dea95dbdea228d40.gif"
         style={{ maxHeight: 700 }}
         width="100%"
       />
-      <div className="Slidetext" style={styles[".Slidetext"]}>Arms &amp; Legs Exercises</div>
+      <div className="Slidetext">Arms &amp; Legs Exercises</div>
     </div>
     <div className="Slidefade">
-      <div className="numbertext" style={styles[".numbertext"]}>2 / 4</div>
+      <div className="numbertext">2 / 4</div>
       <img
         src="https://i.giphy.com/media/3oKIPavRPgJYaNI97W/giphy.gif"
         style={{ maxHeight: 700 }}
         width="100%"
       />
-      <div className="Slidetext" style={styles[".Slidetext"]}>Leg Exercises</div>
+      <div className="Slidetext">Leg Exercises</div>
     </div>
     <div className="Slidefade">
-      <div className="numbertext" style={styles[".numbertext"]}>
+      <div className="numbertext" style={{ color: "black" }}>
         3 / 4
       </div>
       <img
@@ -251,223 +294,29 @@ export default function BreathingApp(){
         style={{ maxHeight: 700 }}
         width="100%"
       />
-      <div className="Slidetext" style={styles[".Slidetext"]}>
+      <div className="Slidetext" style={{ color: "black" }}>
         Back &amp; Body Exercises
       </div>
     </div>
     <div className="Slidefade">
-      <div className="numbertext" style={styles[".numbertext"]}>4 / 4</div>
+      <div className="numbertext">4 / 4</div>
       <img
         src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5bc49a55989429.599c07a9224c3.gif"
         style={{ maxHeight: 700 }}
         width="100%"
       />
-      <div className="Slidetext" style={styles[".Slidetext"]}>Arm Exercises</div>
+      <div className="Slidetext">Arm Exercises</div>
     </div>
     {/* Next and previous buttons */}
-    <a className="prev" onclick="plusSlides(-1)" style={styles[".prev, .next"]}>
+    <a className="prev" onclick="plusSlides(-1)">
       ❮
     </a>
-    <a className="next" onclick="plusSlides(1)" style={styles[".prev, .next"]}>
+    <a className="next" onclick="plusSlides(1)">
       ❯
     </a>
   </div>
-
     </>
 }
-//relax toggle
-let toggledRelaxer = 0;
 
-/*
-white noise 
-sleep
-focus/concentrate
-study
-stress relief
-ambient noise
-*/
 
-//breath var 2 variables
-let interval = 0;
-let breathTimeout1 = 0; //needed to clear breath function & resync
-let breathTimeout2 = 0;
-
-const toggleRelax = document.querySelector(".toggleRelax");
-
-//toggles between diff relaxers
-toggleRelax.addEventListener("click", () => {
-    var scene = document.getElementById("relax-wrapper1");
-    var scene2 = document.getElementById("relax-wrapper2");
-    var contentContainer = document.getElementById("relaxContentsFlexbox");
-
-    toggledRelaxer++;
-    if(toggledRelaxer > 1) {
-      toggledRelaxer = 0;
-    }
-    switch(toggledRelaxer) {
-      case 0: //circle relaxer hovering around
-        scene.style.display = "none";
-        scene2.style.display = "flex";
-
-        clearInterval(interval);
-        clearTimeout(breathTimeout1);
-        clearTimeout(breathTimeout2);
-
-        breathAnim2()
-        interval = setInterval(breathAnim2, time2);
-
-        contentContainer.style.marginTop = "80px";
-        contentContainer.style.marginBottom = "80px";
-        break;
-      case 1: //num of breathes relaxer
-        scene.style.display = "block";
-        scene2.style.display = "none";
-
-        contentContainer.style.marginTop = "0px";
-        contentContainer.style.marginBottom = "0px";
-        break;
-      default:
-    }
-});
-//relax toggle end
-//-----------------------------------
-//breath var 1
-const circleProgress = document.querySelector(".circle-progress");
-const numberOfBreaths = document.querySelector(".breath-input");
-const start = document.querySelector(".breathStart");
-const instructions = document.querySelector(".instructions");
-const breathsText = document.querySelector(".breaths-text");
-
-const relaxSelect = document.querySelector(".relax-input select");
-
-let breathsLeft = 3;
-
-// Watching for selected breaths from user
-numberOfBreaths.addEventListener("change", () => {
-  breathsLeft = numberOfBreaths.value;
-  breathsText.innerText = breathsLeft;
-});
-
-// Grow/Shrink Circle
-const growCircle = () => {
-  circleProgress.classList.add("circle-grow");
-  setTimeout(() => {
-    circleProgress.classList.remove("circle-grow");
-  }, 8000);
-};
-
-// Breathing Instructions
-const breathTextUpdate = () => {
-  breathsLeft--;
-  breathsText.innerText = breathsLeft;
-  instructions.innerText = "Breath in";
-  setTimeout(() => {
-    instructions.innerText = "Hold Breath";
-    setTimeout(() => {
-      instructions.innerText = "Exhale Breath Slowly";
-    }, 4000);
-  }, 4000);
-};
-
-// Breathing App Function
-const breathingApp = () => {
-  const breathingAnimation = setInterval(() => {
-    if (breathsLeft === 0) {
-      clearInterval(breathingAnimation);
-      instructions.innerText = "Breathing session completed. Click 'Begin' to start another session!";
-      start.classList.remove("button-inactive");
-      numberOfBreaths.id = "";
-
-      breathsLeft = numberOfBreaths.value;
-      breathsText.innerText = breathsLeft;
-      return;
-    }
-    growCircle();
-    breathTextUpdate();
-  }, 12000);
-};
-
-// Start Breathing
-start.addEventListener("click", () => {
-  start.classList.add("button-inactive");
-  numberOfBreaths.id = "breath-select-disable";
-
-  instructions.innerText = "Get relaxed, and ready to begin breathing";
-  setTimeout(() => {
-    instructions.innerText = "Breathing is about to begin...";
-    setTimeout(() => {
-      breathingApp();
-      growCircle();
-      breathTextUpdate();
-    }, 2000);
-  }, 2000);
-});
-//breath var 1 end
-//-----------------------------------
-//breath var 2
-const containerVar2 = document.querySelector("#relax-wrapper2");
-const text2 = document.querySelector("#relaxText2");
-
-let time2 = 7500;
-let breathTime2 = (time2 /5) *2;
-let holdTime2 = time2/5;
-
-breathAnim2()
-
-function breathAnim2() {
-    text2.innerHTML = "Breathe in.";
-    containerVar2.className="contain2-grow";
-
-    breathTimeout1 = setTimeout(() => {
-        text2.innerHTML = "Hold..";
-        breathTimeout2 = setTimeout(() => {
-            text2.innerHTML = "Breathe out...";
-            containerVar2.className="contain2-shrink";
-        }, holdTime2);
-    }, breathTime2);
-}
-interval = setInterval(breathAnim2, time2);
-
-//breath var 2 end
-//-----------------------------------
-//slideshow
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("Slidefade");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-} 
-//slideshow end
-//-----------------------------------
-//audio looping playlist
-var audioPlayer = document.getElementById("audio-control");
-var audioArray = ["audio/filthySoil.mp3", "audio/meditation.mp3"];
-var counter = 0;
-audioPlayer.addEventListener('ended', () => {
-  counter++;
-  if(counter >= audioArray.length) {
-    counter = 0;
-  }
-  audioPlayer.src = audioArray[counter];
-  audioPlayer.play();
-});
-
-//-----------------------------------
+export default  BreathingApp;
