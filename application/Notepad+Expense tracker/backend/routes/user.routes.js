@@ -32,7 +32,7 @@ userRouter.post("/register", async (req, res) => {
 userRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   let option ={
-    expiresIn:"3m"
+    expiresIn:"3h"
   }
 
   try {

@@ -8,6 +8,8 @@ import Dashboard from '../components/Dashboard/Dashboard';
 import Income from '../components/Income/Income'
 import Expenses from '../components/Expenses/Expenses';
 import { useGlobalContext } from '../context/globalContext';
+import { Flex, Heading, Image, Text, VStack, HStack} from "@chakra-ui/react";
+
 
 function ExpT() {
   const [active, setActive] = useState(1)
@@ -44,6 +46,7 @@ function ExpT() {
         </main>
       </MainLayout>
     </AppStyled>
+      
   );
 }
 

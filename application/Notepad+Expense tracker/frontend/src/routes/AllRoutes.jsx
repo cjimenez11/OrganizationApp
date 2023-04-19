@@ -4,6 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import NotesPage from "../pages/NotesPage";
 import SignupPage from "../pages/SignupPage";
 import ExpenseTrack from "../index2";
+import BreathingApp from "../pages/BreathingPage";
 import PrivateRoute from "./PrivateRoute";
 
 export default function AllRoutes(){
@@ -14,6 +15,6 @@ export default function AllRoutes(){
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/notes" element={<NotesPage />}></Route>
         <Route path="/expenses" element={<ExpenseTrack />}></Route>
-
+        <Route path="/breathe" element={<BreathingApp />}></Route>
     </Routes>
 }

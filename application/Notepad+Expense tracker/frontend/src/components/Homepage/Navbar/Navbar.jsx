@@ -31,7 +31,7 @@ export default function Navbar() {
   const nav = useNavigate()
   return (
     <>
-      <Box zIndex={1000} position={"fixed"} top={0} w={"100%"}  boxShadow={"rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"}  bg={"yellowgreen"} px={4}>
+      <Box zIndex={1000} position={"fixed"} top={0} w={"100%"}  boxShadow={"rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"}  bg={"lavender"} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box fontWeight={"bold"} cursor={"pointer"} onClick={()=>{
             nav("/")
@@ -39,6 +39,12 @@ export default function Navbar() {
 
           <Flex alignItems={'center'}>
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
+                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                    nav("/breathe")
+                }}>Breathing App</Button>
+                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                    nav("/expenses")
+                }}>Expense Tracker</Button>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/notes")
                 }}>All Notes</Button>
