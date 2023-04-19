@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import {Day} from './Day';
-import {NewEvent} from './NewEvent'; //only for testing/learning, REPLACE WITH TODO COMPONENT
+import {NewEvent} from './NewEvent'; //only for testing/learning, REPLACE WITH TO-DO COMPONENT
 import {ToDo} from './ToDo';
 import './calendar.css';
 
@@ -13,12 +13,13 @@ export const Calendar =()=>{
         localStorage.getItem('events')?JSON.parse(localStorage.getItem('events')):[]
     );  //supposed to items attached to day, FIX TO ALLOW FOR MULTIPLE ITEMS PER DAY
     const eventForDate=date=>events.find(e=>e.date===date);
-    var toDate=new Date();  //initializes current date
 
-    //trying to figure out how to use the dateinput to adjust calendar on demand
-//    var newDate=document.getElementById("newDate");
+    //tracks currently viewed date
+    var toDate=new Date();
     const[dt,setDate]=useState(toDate);
-    const handleDate=(event)=>{setDate(new Date(document.getElementById("newDate").value))};
+    const handleDate=()=>{
+        setDate(new Date(document.getElementById("newDate").value));
+    };
 
     //function to set an event item
     useEffect(()=>{
@@ -28,13 +29,18 @@ export const Calendar =()=>{
     //function for drawing calendar from date, SHOULD RELOCATE TO BACKEND JS
     useEffect(()=>{
         const weekdays=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        if(toDate!==dt){
+            toDate=dt;
+            setNav(0);
+        }
         if(nav!==0){
-            dt.setMonth(new Date().getMonth()+nav);
+            dt.setMonth(dt.getMonth()+nav);
+            toDate=dt;
         }
         const day=dt.getDate();
         const month=dt.getMonth();
         const year=dt.getFullYear();
-        console.log(year);
+
         const firstDayOfMonth=new Date(year,month,1);
         const daysInMonth=new Date(year,month+1,0).getDate();
         const dateString=firstDayOfMonth.toLocaleDateString('en-us',{
@@ -66,8 +72,7 @@ export const Calendar =()=>{
             }
         }
         setDays(daysArr);
-    },[events,nav]);}
-    useDate();
+    },[events,nav,dt]);
 
     //the actual calendar component
     return(
@@ -82,7 +87,7 @@ export const Calendar =()=>{
                     <button id="nextMonth"
                         onClick={()=>setNav(nav+1)}
                     >NEXT</button>
-                    <input type="date" id="newDate" oninput={handleDate}/>
+                    <input type="date" id="newDate" onInput={handleDate}/>
                 </div>
             </div>
             <div id="weekdays">
@@ -121,4 +126,5 @@ export const Calendar =()=>{
         </>
     );
 }
+
 export default Calendar;
