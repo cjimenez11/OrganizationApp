@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, getAllToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
-
+import Calendar from "./components/Calendar";
+import {Day} from './components/Day';
+import {NewEvent} from './components/NewEvent';
 
 function App() {
 
@@ -44,6 +46,7 @@ function App() {
           updateMode = {() => updateMode(item._id, item.text)}
           deleteToDo = {() => deleteToDo(item._id, setToDo)} />)}
         </div>
+        <Calendar />
       </div>
     </div>
   );
