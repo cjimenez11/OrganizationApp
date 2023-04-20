@@ -1,18 +1,31 @@
 import React,{useState, useEffect} from 'react';
 import {Day} from './Day';
 import {NewEvent} from './NewEvent'; //only for testing/learning, REPLACE WITH TO-DO COMPONENT
+import {DeleteEvent} from './DeleteEvent'; //only for testing/learning, REPLACE WITH TO-DO COMPONENT
 import {ToDo} from './ToDo';
+import { addToDo, getAllToDo, updateToDo, deleteToDo } from "../utils/HandleApi";
 import './calendar.css';
 
 export const Calendar =()=>{
     const [nav, setNav]=useState(0);    //month tracker
     const [days, setDays]=useState([]); //day tracker
     const [dateDisplay, setDateDisplay]=useState('');   //displays month/year
-    const [clicked, setClicked]=useState();
+    const [clicked, setClicked]=useState(null);
     const [events, setEvents]=useState(
         localStorage.getItem('events')?JSON.parse(localStorage.getItem('events')):[]
     );  //supposed to items attached to day, FIX TO ALLOW FOR MULTIPLE ITEMS PER DAY
     const eventForDate=date=>events.find(e=>e.date===date);
+
+
+    const [toDo, setToDo] = useState([])
+    const [text, setText] = useState("")
+    const [isUpdating, setIsUpdating] = useState(false)
+    const [toDoId, setToDoId] = useState("")
+    const updateMode = (_id, text) => {
+        setIsUpdating(true)
+        setText(text)
+        setToDoId(_id)
+    }
 
     //tracks currently viewed date
     var toDate=new Date();
@@ -54,20 +67,20 @@ export const Calendar =()=>{
 
         const daysArr=[];
         for(let i=1;i<=paddingDays+daysInMonth;i++){
-            const dayString='${month+1}/${i-paddingDays}/${year}';
+            const dayString=`${month+1}/${i-paddingDays}/${year}`;
             if(i>paddingDays){
                 daysArr.push({
                     value: i-paddingDays,
                     event: eventForDate(dayString),
                     isCurrentDay: i-paddingDays===day&&nav===0,
-                    date: dayString
+                    date: dayString,
                 });
             }else{
                 daysArr.push({
                     value: 'padding',
                     event: null,
                     isCurrentDay: false,
-                    date: ''
+                    date: '',
                 });
             }
         }
@@ -76,7 +89,6 @@ export const Calendar =()=>{
 
     //the actual calendar component
     return(
-        <>
         <div id="c_container">
             <div id="c_header">
                 <div id="monthDisplay">{dateDisplay}</div>
@@ -106,24 +118,35 @@ export const Calendar =()=>{
                         day={d}
                         onClick={()=>{
                             if(d.value!=='padding'){
+                                setDate(new Date(dt.getFullYear(),dt.getMonth(),d.value));
                                 setClicked(d.date);
                             }
                         }}
                     />
                 ))}
             </div>
+            {clicked&&!eventForDate(clicked)&&
+                <NewEvent
+                    onClose={()=>setClicked(null)}
+                    onSave={title=>{
+                        setEvents([...events,{title,date:clicked}]);
+                        setClicked(null);
+                    }}
+                />
+                //temp code for learning how to apply an event to a calendar, REPLACE WITH TO-DO CODE
+            }
+            {clicked&&eventForDate(clicked)&&
+                <DeleteEvent
+                    eventText={eventForDate(clicked).title}
+                    onClose={()=>setClicked(null)}
+                    onDelete={()=>{
+                        setEvents(events.filter(e=>e.date!==clicked));
+                        setClicked(null);
+                    }}
+                />
+                //temp code for learning how to apply an event to a calendar, REPLACE WITH TO-DO CODE
+            }
         </div>
-        {clicked&&
-            <NewEvent
-                onClose={()=>setClicked(null)}
-                onSave={title=>{
-                    setEvents([...events,{title,date:clicked}]);
-                    setClicked(null);
-                }}
-            />
-            //temp code for learning how to apply an event to a calendar, REPLACE WITH TO-DO CODE
-        }
-        </>
     );
 }
 

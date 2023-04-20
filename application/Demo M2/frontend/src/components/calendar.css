@@ -80,7 +80,7 @@ button {
   background-color: #FFFCFF !important;
   box-shadow: none !important;
 }
-#newEvent, #deleteEventModal {
+#newEvent, #deleteEvent {
   z-index: 20;
   padding: 25px;
   background-color: #e8f4fa;
