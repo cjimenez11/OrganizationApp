@@ -31,7 +31,9 @@ export const Calendar =()=>{
     var toDate=new Date();
     const[dt,setDate]=useState(toDate);
     const handleDate=()=>{
-        setDate(new Date(document.getElementById("newDate").value));
+        var newDate=new Date(document.getElementById("newDate").value);
+        newDate.setDate(newDate.getDate()+1);
+        setDate(newDate);
     };
 
     //function to set an event item
