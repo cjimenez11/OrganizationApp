@@ -1,6 +1,6 @@
 # CSC648-spring23-04-Team01 Repository
 
-**Application URL: <http://mylineup.online/>**
+**Application URL: http://34.102.4.227/**
 
 ## Before completing Milestone 0
 
