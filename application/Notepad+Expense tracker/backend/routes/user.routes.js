@@ -1,3 +1,5 @@
+import userVal from "./userValidation";
+
 const express = require("express");
 const { UserModel } = require("../models/UserModel");
 const bcrypt = require("bcrypt");
@@ -10,6 +12,7 @@ userRouter.get("/", (req, res) => {
 });
 
 userRouter.post("/register", async (req, res) => {
+  const data = userVal(req.body);
   const { name, email, password } = req.body;
   bcrypt.hash(password, 5, async function (err, hash) {
     if (err) return res.send({ message: "somthing went wrong", status: 0 });

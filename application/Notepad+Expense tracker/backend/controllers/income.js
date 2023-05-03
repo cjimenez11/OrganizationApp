@@ -40,11 +40,17 @@ exports.getIncomes = async (req, res) =>{
 
 exports.deleteIncome = async (req, res) =>{
     const {id} = req.params;
-    IncomeSchema.findByIdAndDelete(id)
-        .then((income) =>{
-            res.status(200).json({message: 'Income Deleted'})
-        })
-        .catch((err) =>{
-            res.status(500).json({message: 'Server Error'})
-        })
+    // IncomeSchema.findByIdAndDelete(id)
+    //     .then((income) =>{
+    //         res.status(200).json({message: 'Income Deleted'})
+    //     })
+    //     .catch((err) =>{
+    //         res.status(500).json({message: 'Server Error'})
+    //     })
+    try {
+        await IncomeSchema.findByIdAndDelete(id);
+        res.status(200).json({ message: "Income Deleted" });
+      } catch (err) {
+        res.status(500).json({ message: "Server Error" });
+      }
 }
