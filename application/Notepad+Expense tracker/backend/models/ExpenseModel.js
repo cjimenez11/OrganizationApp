@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-
+/**
+ * Schema for the Expense Model
+ * this includes how the data is stored in the database
+ */
 const ExpenseSchema = new mongoose.Schema({
     title: {
         type: String,

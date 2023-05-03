@@ -1,5 +1,6 @@
 //import {dashboard, expenses, transactions, trend} from '../utils/Icons'
 import { AnalyticsIcon, CashIcon, CutIcon } from 'chakra-ui-ionicons';
+//import Homepage from "../pages/Homepage";
 
 export const menuItems = [
     {
@@ -8,11 +9,11 @@ export const menuItems = [
         icon: <AnalyticsIcon />,
         link: '/dashboard'
     },
-   /* {
+    /*{
         id: 2,
-        title: "View Transactions",
-        icon: transactions,
-        link: "/dashboard",
+        title: "Return to Home",
+        icon:<AnalyticsIcon />,
+        link: "/Homepage",
     },*/
     {
         id: 3,

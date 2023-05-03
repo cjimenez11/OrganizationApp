@@ -1,5 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 
+//This is the styling of the main content on
+//the Expense Tracker page
 export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
@@ -14,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         --primary-color3: 'color: rgba(34, 34, 96, .4)';
         --color-green: #42AD00;
         --color-grey: #aaa;
-        --color-accent: #F56692;
+        --color-accent: #D8BFD8;
         --color-delete: #FF0000;
     }
 

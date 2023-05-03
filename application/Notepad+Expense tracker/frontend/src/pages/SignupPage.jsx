@@ -19,6 +19,15 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../constants/config";
 import { getUser } from "../Redux/users/user.actions";
 
+
+/**
+ * 
+ * This is our registration page
+ * we ask the users for their name, email and password
+ * then we input the data into our MongoDB database
+ * 
+ */
+
 export default function SignupPage(){
     const nav = useNavigate()
     const [email,setEmail] =useState("")

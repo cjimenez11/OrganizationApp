@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+/**
+ * 
+ * @returns expenses added to the list 
+ */
+
 function Button({name, icon, onClick, bg, bPad, color, bRad}) {
     return (
         <ButtonStyled style={{

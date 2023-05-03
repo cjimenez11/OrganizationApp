@@ -14,6 +14,15 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+
+/**
+ * 
+ * This is our notes page that has all the notes
+ * for the user. The user can create new notes,
+ * edit existing notes and delete notes
+ * 
+ */
+
 export default function NotesPage() {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.noteReducer);

@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-
+/**
+ * Schema for the Income Model
+ * this includes how the income is stored in the database
+ */
 const IncomeSchema = new mongoose.Schema({
     title: {
         type: String,

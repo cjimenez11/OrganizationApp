@@ -11,7 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import "./style.css";
-import notebg from "../../../assets/note_bg.png";
+import notebg from "..//..//..//assets//note_bg.png";
 import { useDispatch } from "react-redux";
 import { deleteNotes, updateNotes } from "../../../Redux/notes/note.actions";
 import {
@@ -24,6 +24,14 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
+
+/**
+ * 
+ * This is our note card creator component
+ * we create notes, commit them too the
+ * database and display them on the page
+ *  
+ */
 
 export default function NoteCard({ title, body, _id }) {
   const dispatch = useDispatch();

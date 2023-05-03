@@ -1,6 +1,9 @@
 const IncomeSchema= require("../models/IncomeModel")
 
-
+/**
+ * Function that takes income inputs from the user
+ * and adds it to the database
+ */
 exports.addIncome = async (req, res) => {
     const {title, amount, category, description, date}  = req.body
 
@@ -29,6 +32,9 @@ exports.addIncome = async (req, res) => {
     console.log(income)
 }
 
+/**
+ * Function retrieves all the incomes from the database 
+ */
 exports.getIncomes = async (req, res) =>{
     try {
         const incomes = await IncomeSchema.find().sort({createdAt: -1})
@@ -38,6 +44,9 @@ exports.getIncomes = async (req, res) =>{
     }
 }
 
+/**
+ * Function that deletes Incomes from the database
+ */
 exports.deleteIncome = async (req, res) =>{
     const {id} = req.params;
     IncomeSchema.findByIdAndDelete(id)

@@ -17,6 +17,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUser } from "../Redux/users/user.actions";
 
+/**
+ * This is our login page
+ * 
+ * It takes inout from the user and sends it to the backend
+ * We check our MongoDB database for the user
+ * and allow them to login if they are registered 
+ * 
+ */
+
 export default function LoginPage(){
     const nav = useNavigate()
     const {auth,token,loading,error} = useSelector((state)=>state.userReducer)
