@@ -2,6 +2,8 @@ import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { Navbar } from "../components/Homepage/Navbar";
 import note from "../assets/note.png";
 
+//This function contains all the details to be displayed on the homepage along with a brief description of the app.
+
 export default function Homepage() {
   return (
     <Box padding={8}>

@@ -1,5 +1,6 @@
 const IncomeSchema= require("../models/IncomeModel")
 
+//This function is used to add new Income data to DB.
 
 exports.addIncome = async (req, res) => {
     const {title, amount, category, description, date}  = req.body
@@ -29,6 +30,8 @@ exports.addIncome = async (req, res) => {
     console.log(income)
 }
 
+//This function is used to get Income data. 
+
 exports.getIncomes = async (req, res) =>{
     try {
         const incomes = await IncomeSchema.find().sort({createdAt: -1})
@@ -38,13 +41,21 @@ exports.getIncomes = async (req, res) =>{
     }
 }
 
+//This function deletes the incomes from DB.
+
 exports.deleteIncome = async (req, res) =>{
     const {id} = req.params;
-    IncomeSchema.findByIdAndDelete(id)
-        .then((income) =>{
-            res.status(200).json({message: 'Income Deleted'})
-        })
-        .catch((err) =>{
-            res.status(500).json({message: 'Server Error'})
-        })
+    // IncomeSchema.findByIdAndDelete(id)
+    //     .then((income) =>{
+    //         res.status(200).json({message: 'Income Deleted'})
+    //     })
+    //     .catch((err) =>{
+    //         res.status(500).json({message: 'Server Error'})
+    //     })
+    try {
+        await IncomeSchema.findByIdAndDelete(id);
+        res.status(200).json({ message: "Income Deleted" });
+      } catch (err) {
+        res.status(500).json({ message: "Server Error" });
+      }
 }
