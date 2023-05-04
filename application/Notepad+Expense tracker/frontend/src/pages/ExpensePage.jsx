@@ -10,12 +10,15 @@ import Expenses from '../components/Expenses/Expenses';
 import { useGlobalContext } from '../context/globalContext';
 import { Flex, Heading, Image, Text, VStack, HStack} from "@chakra-ui/react";
 
+//This function displays the frontend of the expense tracker app by importing Dashboard. Note that Dashboard.js contains full FE code.
 
 function ExpT() {
   const [active, setActive] = useState(1)
 
   const global = useGlobalContext()
   console.log(global);
+
+  //Function defines which element of the sidebar should be highlighted when the user navigates through various pages of expense tracker.
 
   const displayData = () => {
     switch(active){

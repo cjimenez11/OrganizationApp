@@ -1,5 +1,6 @@
-//import {dashboard, expenses, transactions, trend} from '../utils/Icons'
 import { AnalyticsIcon, CashIcon, CutIcon } from 'chakra-ui-ionicons';
+
+//Defines the items in the sidebar of the expense tracker
 
 export const menuItems = [
     {

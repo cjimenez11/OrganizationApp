@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 import { DeleteIcon, CalendarIcon, ChatIcon } from '@chakra-ui/icons';
 import { CashIcon, LogoUsdIcon } from 'chakra-ui-ionicons';
 
+//Provided all the various categories options of income and expense the user can add
 
 function IncomeItem({
     id,

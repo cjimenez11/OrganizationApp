@@ -5,6 +5,8 @@ import { InnerLayout } from '../../styles/Layouts';
 import Form from '../Form/Form';
 import IncomeItem from '../IncomeItem/IncomeItem';
 
+//This function displays the FE of income page of the tracker => Adding Income input, Displays incomes
+
 function Income() {
     const {addIncome,incomes, getIncomes, deleteIncome, totalIncome} = useGlobalContext()
 
@@ -42,6 +44,8 @@ function Income() {
         </IncomeStyled>
     )
 }
+
+//Styling income page.
 
 const IncomeStyled = styled.div`
     display: flex;

@@ -6,6 +6,8 @@ import Form from '../Form/Form';
 import IncomeItem from '../IncomeItem/IncomeItem';
 import ExpenseForm from './ExpenseForm';
 
+//This function displays the FE of expenses page of the tracker => Adding Expenses input, Displays expenses
+
 function Expenses() {
     const {addIncome,expenses, getExpenses, deleteExpense, totalExpenses} = useGlobalContext()
 
@@ -44,6 +46,8 @@ function Expenses() {
         </ExpenseStyled>
     )
 }
+
+//Styling the Expense page.
 
 const ExpenseStyled = styled.div`
     display: flex;

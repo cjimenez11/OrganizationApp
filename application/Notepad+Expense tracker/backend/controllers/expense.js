@@ -1,5 +1,6 @@
 const ExpenseSchema = require("../models/ExpenseModel")
 
+//This function is used to add new Expense data to DB.
 
 exports.addExpense = async (req, res) => {
     const {title, amount, category, description, date}  = req.body
@@ -29,6 +30,8 @@ exports.addExpense = async (req, res) => {
     console.log(income)
 }
 
+//This function is used to get Expense data. 
+
 exports.getExpense = async (req, res) =>{
     try {
         const incomes = await ExpenseSchema.find().sort({createdAt: -1})
@@ -37,6 +40,8 @@ exports.getExpense = async (req, res) =>{
         res.status(500).json({message: 'Server Error'})
     }
 }
+
+//This function deletes the expense from DB.
 
 exports.deleteExpense = async (req, res) =>{
     const {id} = req.params;

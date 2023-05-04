@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import { useGlobalContext } from '../../context/globalContext';
 import History from '../../History/History';
 import { InnerLayout } from '../../styles/Layouts';
-//import { dollar } from '../../utils/Icons';
 import Chart from '../Chart/Chart';
 import { LogoUsdIcon } from 'chakra-ui-ionicons';
+
+//This function displays the Dashboard expense tracker => graph on income and expenses, Total Balance and min and max values of Incomes and expenses. 
 
 function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
