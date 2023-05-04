@@ -1,6 +1,5 @@
 import { Box, Flex, Image, VStack } from "@chakra-ui/react";
-import {
-    
+import {   
     FormControl,
     FormLabel,
     Input,
@@ -16,6 +15,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUser } from "../Redux/users/user.actions";
+
+//This function displays the FE of login page. It passes on the user input to BE to verify the email and password from the DB.
 
 export default function LoginPage(){
     const nav = useNavigate()
@@ -38,8 +39,6 @@ export default function LoginPage(){
 
         <Image wi={"50%"} src={"https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?w=740&t=st=1676630553~exp=1676631153~hmac=6cbdb020ef439ca463660edbc265da0d05f487d529f69f814ee3f5de6e0f54cc"}></Image>
         <VStack w={"50%"}>
-
-            
         <Flex
       minH={'100vh'}
       align={'center'}

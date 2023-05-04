@@ -2,7 +2,7 @@
 
 const req = require('supertest');
 const express = require('express');
-const { noteRouter } = require('../routes/note.routes');
+const { noteRouter } = require('../routes/noteRoutes');
 const { NoteModel } = require('../models/NoteModel');
 
 const app = express();
