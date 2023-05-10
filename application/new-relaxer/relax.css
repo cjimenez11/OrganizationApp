@@ -107,9 +107,11 @@
     border-radius: 3px 0 0 3px;
   }
 
-  /* On hover, add a black background color with a little bit see-through */
+  /* On hover, change bg */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    /*background-color: rgba(0,0,0,0.8);/**/
+    background-color: black; /*fallback incase something goes wrong*/
+    background-color: var(--slideshow-button);/**/
   }
 
   /* Caption text */
@@ -339,7 +341,10 @@
     color: #fff;
     align-self: center;
   } */
-
+  .audioFlex {
+    /*margin-left: 10%;*/
+    display: flex;
+  }
   .music-text {
     font-family: 'Fredoka', sans-serif;
     text-align: center;
@@ -347,7 +352,7 @@
   }
   
   audio {
-    width: 180px;
+    width: 200px;
     height: 50px;
     border:5px solid #9999ff;
     border-radius: 50px;

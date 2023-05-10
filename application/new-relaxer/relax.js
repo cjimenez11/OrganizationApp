@@ -235,6 +235,26 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("Slidefade");
+
+  const prevArrow = document.querySelector(".prev");
+  const nextArrow = document.querySelector(".next");
+  prevArrow.style.setProperty('--slideshow-button', 'rgba(0,0,0,0.8)');
+  nextArrow.style.setProperty('--slideshow-button', 'rgba(0,0,0,0.8)');
+
+  if(n==3 || n==5 || n==6 ||n==8 || n<1)  {//slides 3,5,6,8 have light bgs, need to change arrow
+    prevArrow.style.setProperty('--slideshow-button', 'rgba(33,33,33,0.8)');
+    nextArrow.style.setProperty('--slideshow-button', 'rgba(33,33,33,0.8)');
+
+    prevArrow.style.color = "black"
+    nextArrow.style.color = "black";
+
+  } else {
+    prevArrow.style.setProperty('--slideshow-button', 'rgba(0,0,0,0.8)');
+    nextArrow.style.setProperty('--slideshow-button', 'rgba(0,0,0,0.8)');
+
+    prevArrow.style.color = "white";
+    nextArrow.style.color = "white";
+  }
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -270,10 +290,11 @@ audioPlayer.addEventListener('ended', () => {
 //*/
 
 //OR, audio dropdown selector
+/*
 const musicInput = document.querySelector(".musicInput");
 musicInput.addEventListener("change", () => {
   audioPlayer.src = musicInput.value;
-});
+});*/
 
 
 //-----------------------------------

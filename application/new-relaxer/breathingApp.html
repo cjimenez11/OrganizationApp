@@ -19,7 +19,6 @@
         </style>
     </head>
     <body>
-        <!--how to find direct mp3 urls: type "intitle:index.of?mp3 [song title]" into google-->
         <div id="sceneFlexbox">
             <div class="sceneSelector"> <!--module selector-->
                 <button class="toggleSceneBreather button-inactive">Take a Breather </button>
@@ -37,6 +36,7 @@
                                     <select class="breath-input">
                                     <option value="3">3 Breaths</option>
                                     <option value="5">5 Breaths</option>
+                                    <option value="10">10 Breaths</option>
                                     </select>
                                 </div>
                                 <div class="circle-wrap">
@@ -64,34 +64,44 @@
                     <div class="slideshow-container">
                         <!--GIFS w/ numbering and caption text -->
                         <div class="Slidefade">
-                            <div class="numbertext">1 / 6</div>
+                            <div class="numbertext">1 / 8</div>
                             <img src="https://cdn.dribbble.com/users/919329/screenshots/2796076/media/05715cb3ea596b61dea95dbdea228d40.gif" style="max-height: 700px; width:100%;">
                             <div class="Slidetext">Arms & Legs Exercises</div>
                         </div>
                         <div class="Slidefade">
-                            <div class="numbertext">2 / 6</div>
+                            <div class="numbertext">2 / 8</div>
                             <img src="https://i.giphy.com/media/3oKIPavRPgJYaNI97W/giphy.gif" style="max-height: 700px; width:100%;">
                             <div class="Slidetext">Leg Exercises</div>
                         </div>
                         <div class="Slidefade">
-                            <div class="numbertext" style="color:black;">3 / 6</div>
+                            <div class="numbertext" style="color:black;">3 / 8</div>
                             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/34c52563799919.5abc9eb3f3f75.gif" style="max-height: 700px; width:100%">
                             <div class="Slidetext" style="color:black;">Back & Body Exercises</div>
                         </div>
                         <div class="Slidefade">
-                            <div class="numbertext">4 / 6</div>
+                            <div class="numbertext">4 / 8</div> <!--find a higher quality arm gif potentially-->
                             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5bc49a55989429.599c07a9224c3.gif" style="max-height: 700px; width:100%">
                             <div class="Slidetext">Arm Exercises</div>
                         </div>
                         <div class="Slidefade">
-                            <div class="numbertext" style="color:black;">5 / 6</div>
+                            <div class="numbertext" style="color:black;">5 / 8</div>
                             <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmFjMzc0MjEyMGQ4YjE0NTQ2Yjg2Nzg2Njc2MjkzMGE5NzVmMjU1MyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xTk9ZXimSga3WsARt6/giphy.gif" style="max-height: 700px;" width="100%">
                             <div class="Slidetext" style="color:black;">Neck, Core & Leg Exercises</div>
                         </div>
                         <div class="Slidefade">
-                            <div class="numbertext" style="color:black;">6 / 6</div>
+                            <div class="numbertext" style="color:black;">6 / 8</div>
                             <img src="https://media.giphy.com/media/kcT0AAkJxu8xTKfjwd/giphy.gif" style="max-height: 700px;" width="100%">
                             <div class="Slidetext" style="color:black;">Neck & Body Exercises</div>
+                        </div>
+                        <div class="Slidefade">
+                            <div class="numbertext">7 / 8</div>
+                            <img src="https://static01.nyt.com/images/2020/01/09/fashion/09METIME/09METIME-articleLarge.gif" style="max-height: 700px;" width="100%">
+                            <div class="Slidetext">Leg Exercise</div>
+                        </div>
+                        <div class="Slidefade">
+                            <div class="numbertext" style="color:black;">8 / 8</div>
+                            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTViYTk2YzhiZTU3YzIzYjc2OGM5NDRjZWQyODc2Yjg0N2Y2Y2ZkOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ks6Ej3zdLYEuILa2PY/giphy.gif" style="max-height: 700px;" width="100%">
+                            <div class="Slidetext" style="color:black;">Light Stretches</div>
                         </div>
                         <!-- Next and previous buttons -->
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -108,14 +118,15 @@
                     </div>
                     <audio id="audio-control" controls src="audio/filthySoil.mp3" type="audio/mpeg"></audio>
                 </div> -->
+                <!--how to find direct mp3 urls: type "intitle:index.of?mp3 [song title]" into google-->
                 <div id="sceneMusic" style="display: none;">
-                    <div style="display: block; margin-left: 20%; margin-bottom: 5%; line-height: 26px;">
-                    <p class="music-text" >White Noise : <audio id="audio-control1" controls src="audio/White_noise.mp3" type="audio/mpeg"></audio></p>
-                    <p class="music-text" >Meditation : <audio id="audio-control2" controls src="audio/meditation.mp3" type="audio/mpeg"></audio></p>
-                    <p class="music-text" >Stress-Relief : <audio id="audio-control2" controls src="audio/stressfree.mp3" type="audio/mpeg"></audio></p>
-                    <p class="music-text" >Motivational/Focus : <audio id="audio-control2" controls src="audio/motivational.mp3" type="audio/mpeg"></audio></p>
-                    </div>
-                    <img src="https://cdn.dribbble.com/users/1242979/screenshots/7099165/media/e521bd143bf1e795af3ec725a68e273f.gif" class="playergif">
+                        <div style="display: block; margin-left: 20%; margin-bottom: 5%; line-height: 26px;">
+                            <p class="music-text" >White Noise : <audio id="audio-control1" controls src="audio/White_noise.mp3" type="audio/mpeg"></audio></p>
+                            <p class="music-text" >Meditation : <audio id="audio-control2" controls src="audio/meditation.mp3" type="audio/mpeg"></audio></p>
+                            <p class="music-text" >Stress-Relief : <audio id="audio-control2" controls src="audio/stressfree.mp3" type="audio/mpeg"></audio></p>
+                            <p class="music-text" >Motivational/Focus : <audio id="audio-control2" controls src="audio/motivational.mp3" type="audio/mpeg"></audio></p>
+                        </div>
+                        <img src="https://cdn.dribbble.com/users/1242979/screenshots/7099165/media/e521bd143bf1e795af3ec725a68e273f.gif" class="playergif">
                 </div>
             </div>
         </div>
