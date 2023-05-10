@@ -107,10 +107,9 @@
     border-radius: 3px 0 0 3px;
   }
 
-  /* On hover, change bg */
+  /* On hover, change bg depending on var, determined in relax.js */
   .prev:hover, .next:hover {
-    /*background-color: rgba(0,0,0,0.8);/**/
-    background-color: black; /*fallback incase something goes wrong*/
+    background-color: rgba(0,0,0,0.8);/*fallback incase something goes wrong*/
     background-color: var(--slideshow-button);/**/
   }
 
@@ -341,10 +340,6 @@
     color: #fff;
     align-self: center;
   } */
-  .audioFlex {
-    /*margin-left: 10%;*/
-    display: flex;
-  }
   .music-text {
     font-family: 'Fredoka', sans-serif;
     text-align: center;
