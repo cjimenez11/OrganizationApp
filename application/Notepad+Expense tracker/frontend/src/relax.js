@@ -25,7 +25,7 @@ const sceneExercise = document.getElementById("sceneExercise");
 const sceneMusic = document.getElementById("sceneMusic");
 
 //changes which module is displayed, which button is inactive, & the margins for sceneContents
-function sceneSwitch(sceneNum) {
+async function sceneSwitch(sceneNum) {
   switch(sceneNum) {
     case 0: //breather
       clearInterval(interval);
@@ -81,7 +81,7 @@ let toggledRelaxer = 0;
 
 const toggleRelax = document.querySelector(".toggleRelax");
 
-toggleRelax.addEventListener("click", () => {
+toggleRelax.addEventListener("click", async() => {
     var relaxScene = document.getElementById("relax-wrapper1");
     var relaxScene2 = document.getElementById("relax-wrapper2");
     var contentContainer = document.getElementById("relaxContentsFlexbox");
@@ -129,7 +129,7 @@ const relaxSelect = document.querySelector(".relax-input select");
 let breathsLeft = 3;
 
 // Watching for selected breaths from user
-numberOfBreaths.addEventListener("change", () => {
+numberOfBreaths.addEventListener("change", async() => {
   breathsLeft = numberOfBreaths.value;
   breathsText.innerText = breathsLeft;
 });
@@ -174,7 +174,7 @@ const breathingApp = () => {
 };
 
 // Start Breathing
-start.addEventListener("click", () => {
+start.addEventListener("click", async() => {
   start.classList.add("button-inactive");
   numberOfBreaths.id = "breath-select-disable";
 
@@ -200,7 +200,7 @@ let holdTime2 = time2/5;
 
 breathAnim2()
 
-function breathAnim2() {
+async function breathAnim2() {
     text2.innerHTML = "Breathe in.";
     containerVar2.className="contain2-grow";
 
@@ -270,7 +270,7 @@ audioPlayer.addEventListener('ended', () => {
 
 //OR, audio dropdown selector
 const musicInput = document.querySelector(".musicInput");
-musicInput.addEventListener("change", () => {
+musicInput.addEventListener("change", async() => {
   audioPlayer.src = musicInput.value;
 });
 

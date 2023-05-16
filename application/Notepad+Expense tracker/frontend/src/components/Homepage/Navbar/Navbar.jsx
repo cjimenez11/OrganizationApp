@@ -48,14 +48,13 @@ function Navbar() {
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
                 <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/breathe")
-                }}>Relaxer App</Button>
-
+                }}>Relaxer</Button>
                 <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/expenses")
                 }}>Expense Tracker</Button>
                 <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/notes")
-                }}>All Notes</Button>
+                }}>Notepad</Button>
                 <Button display={auth==true?"none":"block"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/register")
                 }}>Sign up</Button>
