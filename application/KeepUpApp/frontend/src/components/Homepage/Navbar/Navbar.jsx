@@ -35,7 +35,7 @@ export default function Navbar() {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box fontWeight={"bold"} cursor={"pointer"} onClick={()=>{
             nav("/")
-          }} color="navy">Notes App</Box>
+          }} color="navy">KeepUpApp</Box>
 
           <Flex alignItems={'center'}>
             <Stack alignItems={"center"} direction={'row'} spacing={7}>

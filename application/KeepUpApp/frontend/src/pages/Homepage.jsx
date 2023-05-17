@@ -15,7 +15,7 @@ export default function Homepage() {
       {orbMemo}
       <Image position={"absolute"} right={0} w={500} src={note} />
       <Heading mt={16} textAlign={"start"} size={"4xl"}>
-        Note App
+        KeepUpApp
       </Heading>
       <Text mt={8} maxW={"50%"} textAlign={"justify"}>
         Hello Guys!!! Welsome to the "Keep Up App". This app was developed by
