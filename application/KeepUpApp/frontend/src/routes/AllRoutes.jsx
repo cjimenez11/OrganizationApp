@@ -7,6 +7,7 @@ import ExpenseTrack from "../pages/ExpensePage";
 import BreathingApp from "../pages/BreathingPage";
 import RelaxerNav from "../pages/RelaxerNav";
 import MusicPlayer from "../pages/Music";
+import ExcerciseSlides from "../pages/Excercise";
 import PrivateRoute from "./PrivateRoute";
 
 export default function AllRoutes(){
@@ -20,5 +21,6 @@ export default function AllRoutes(){
         <Route path="/breathe" element={<BreathingApp />}></Route>
         <Route path="/music" element={<MusicPlayer />}></Route>
         <Route path="/relaxer" element={<RelaxerNav />}></Route>
+        <Route path="/exercise" element={<ExcerciseSlides />}></Route>
     </Routes>
 }
