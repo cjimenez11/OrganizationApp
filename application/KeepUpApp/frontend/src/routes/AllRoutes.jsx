@@ -3,8 +3,10 @@ import Homepage from "../pages/Homepage";
 import LoginPage from "../pages/LoginPage";
 import NotesPage from "../pages/NotesPage";
 import SignupPage from "../pages/SignupPage";
-import ExpenseTrack from "../index2";
+import ExpenseTrack from "../pages/ExpensePage";
 import BreathingApp from "../pages/BreathingPage";
+import RelaxerNav from "../pages/RelaxerNav";
+import MusicPlayer from "../pages/Music";
 import PrivateRoute from "./PrivateRoute";
 
 export default function AllRoutes(){
@@ -16,5 +18,7 @@ export default function AllRoutes(){
         <Route path="/notes" element={<NotesPage />}></Route>
         <Route path="/expenses" element={<ExpenseTrack />}></Route>
         <Route path="/breathe" element={<BreathingApp />}></Route>
+        <Route path="/music" element={<MusicPlayer />}></Route>
+        <Route path="/relaxer" element={<RelaxerNav />}></Route>
     </Routes>
 }

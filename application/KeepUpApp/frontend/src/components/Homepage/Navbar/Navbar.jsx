@@ -41,13 +41,13 @@ export default function Navbar() {
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/breathe")
-                }}>Breathing App</Button>
+                }}>Relaxer</Button>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/expenses")
                 }}>Expense Tracker</Button>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/notes")
-                }}>All Notes</Button>
+                }}>Notepad</Button>
                 <Button display={auth==true?"none":"block"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/register")
                 }}>Sign up</Button>

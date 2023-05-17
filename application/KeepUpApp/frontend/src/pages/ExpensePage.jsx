@@ -8,6 +8,8 @@ import Dashboard from '../components/Dashboard/Dashboard';
 import Income from '../components/Income/Income'
 import Expenses from '../components/Expenses/Expenses';
 import { useGlobalContext } from '../context/globalContext';
+import { GlobalProvider } from '../context/globalContext';
+import { GlobalStyle } from '../styles/GlobalStyle';
 import { Flex, Heading, Image, Text, VStack, HStack} from "@chakra-ui/react";
 
 //This function displays the frontend of the expense tracker app by importing Dashboard. Note that Dashboard.js contains full FE code.
@@ -40,16 +42,18 @@ function ExpT() {
   },[])
 
   return (
-    <AppStyled bg={bg} className="App">
-      {orbMemo}
-      <MainLayout>
-        <Navigation active={active} setActive={setActive} />
-        <main>
-          {displayData()}
-        </main>
-      </MainLayout>
-    </AppStyled>
-      
+    <React.StrictMode>
+      <GlobalStyle />
+      <GlobalProvider>
+        <AppStyled bg={bg} className="App">
+          {orbMemo}
+          <MainLayout>
+            <Navigation active={active} setActive={setActive} />
+            <main>{displayData()}</main>
+          </MainLayout>
+        </AppStyled>
+      </GlobalProvider>
+    </React.StrictMode>
   );
 }
 
