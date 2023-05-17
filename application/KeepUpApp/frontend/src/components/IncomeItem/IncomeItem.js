@@ -6,8 +6,14 @@ import Button from '../Button/Button';
 import { DeleteIcon, CalendarIcon, ChatIcon } from '@chakra-ui/icons';
 import { CashIcon, LogoUsdIcon } from 'chakra-ui-ionicons';
 
-//Provided all the various categories options of income and expense the user can add
-
+/**
+ * 
+ * This is a function that helps us choose
+ * what items are providing our income wether
+ * spent or earned
+ * 
+ * Has the date and time we received or spent the income
+ */
 function IncomeItem({
     id,
     title,
@@ -103,7 +109,7 @@ function IncomeItem({
 }
 
 const IncomeItemStyled = styled.div`
-    background: #FCF6F9;
+    background: #E6E6FA;
     border: 2px solid #FFFFFF;
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
     border-radius: 20px;

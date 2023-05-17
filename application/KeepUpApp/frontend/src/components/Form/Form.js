@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../../context/globalContext';
 import Button from '../Button/Button';
+//import { plus } from '../../utils/Icons';
 import { AddIcon } from 'chakra-ui-ionicons';
 
 //This function displays the Inputs for adding Income and also sends the data for adding income.
@@ -20,14 +21,10 @@ function Form() {
 
     const { title, amount, date, category,description } = inputState;
 
-    //Sets input state
-
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
         setError('')
     }
-
-    //Adds income
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -102,7 +99,6 @@ function Form() {
     )
 }
 
-//Form Styling
 
 const FormStyled = styled.form`
     display: flex;

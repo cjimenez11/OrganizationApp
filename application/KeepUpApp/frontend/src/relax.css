@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Nanum+Pen+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,274 +11,645 @@
     background: #88ABFF;
   }
 
-/*--------------------------------*/
-/*NAVBAR*/
-#topNavFlexbox {
-    background-color: #8a8aff;/**/
+  /*--------------------------------*/
+  /*SCENE CONTAINER*/
+    #sceneFlexbox {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+      background-color: #8a8aff;
+    }
+    .sceneSelector {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      background-color: white;
+    }
+    .sceneSelector > button {
+      width: 100%;
+    }
+    .sceneContents {
+      margin-top: 5%;
+      margin-bottom: 0px;
+    }
+    #sceneBreather {
+      display: block;
+    }
+    #sceneMusic {
+      margin: auto;
+      align-items: center;
+    }
+  /*--------------------------------*/
+  /*RELAX CONTAINER*/
+    #relaxContentsFlexbox {
+      display: flex;
+      align-items: center;
+      margin-top: 80px;
+      margin-bottom: 80px;
+  
+    }
+  /*--------------------------------*/
+  /*IMGS & GIFS*/
+    /*body {
+      background-image: url();
+      background-repeat: no-repeat;
+      background-size: cover;
+    }*/
+    /*
+    **ARMS X
+    LEGS
+    WHOLE BODY X
+    NECK
+    BACK
+    animated yoga, purple, background USED
+    https://cdn.dribbble.com/users/919329/screenshots/2796076/media/05715cb3ea596b61dea95dbdea228d40.gif
+    sunset beach, orange&black
+    https://static.wikia.nocookie.net/survivor-canadienne-org/images/8/8d/Sunset-Waves-960px.gif
+    animated yoga, purple, background
+    <iframe src="https://giphy.com/embed/3oKIPavRPgJYaNI97W" width="480" height="360" frameBorder="0" class="" allowFullScreen></iframe>
+    <a href="https://giphy.com/gifs/animation-yoga-exercise-3oKIPavRPgJYaNI97W"></a>
+    hover meditation, no background
+    https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Y0M2E4YmJkM2YwOGVkNjFmMWMzMzBiMTg1MTNjYzIyZWM1OGU4YyZjdD1z/xUA7bbcVDWik6cPdmg/giphy.gif
     
-    align-items: left;
-    overflow:auto;
-    gap: 0px;
-    visibility: visible;
-  }
-  #topNavFlexbox > a {
-    background-color: #a78aff;/**/
-    border: thin white solid;
-    text-decoration: none;
-    color:#ffffff;
-    margin: 0px;
+    animated yoga, pink, no background, stiff anim **HAS WHITE OUTLINE
+    https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5bc49a55989429.599c07a9224c3.gif
+    animated yoga, mint, background
+    https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/34c52563799919.5abc9eb3f3f75.gif
+    */
+  /*--------------------------------*/
+  /*SLIDESHOW*/
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      box-sizing: border-box;
+    }
+  
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+  
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  
+    /* Caption text */
+    .Slidetext {
+      color: white;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: white;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+  
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+  /*--------------------------------*/
+  /*BUTTON BREATHING APP*/
+  .relax-input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+    
+    .relax-input select {
+      border: none;
+      min-width: 300px;
+      font-size: 16px;
+      padding: 8px 4px;
+      background-color: #6666ff;
+      color: #fff;
+      align-self: center;
+    }
+    
+    .relax-input select:focus {
+      outline: none;
+    }
+    
+    .circle-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    .circle-outline {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 15px solid #f1f1f1;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .circle-progress {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: #6666ff;
+      border-radius: 50%;
+      transition: 4s ease all;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .circle-grow {
+      transform: scale(5.3);
+    }
+    
+    .breaths {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color:white;
+    }
+    
+    .instructions {
+      text-align: center;
+      margin-bottom: 35px;
+      color:white;
+    }
+    
+    button {
+      align-self: center;
+      padding: 8px 20px;
+      background-color: #6666ff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease all;
+    }
+    
+    button:hover {
+      background-color: #f1f1f1;
+      color: #6666ff;
+    }
+    
+    .button-inactive {
+      pointer-events: none;
+      background-color: #969696;
+    }
+    #breath-select-disable {
+      pointer-events: none;
+      background-color: #969696;
+    }
+  /*BUTTON BREATHING APP END*/
+  /*--------------------------------*/
+  /*AUTO BREATHING APP*/
+    #relax-wrapper2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      width: 300px;
+      margin: auto;
+      margin-top: 0px;
+      position: relative;
+      transform: scale(1);      
+    }
+    #relaxText2 {
+      color: white;
+    }
+    .relax-gradient-circle {
+      border-radius: 50%;
+  
+      background: conic-gradient(
+          #9999ff 0%,
+          #cc99ff 40%,
+          #ffffff 40%,
+          #ffffff 60%,
+          #99ccff 60%,
+          #6699ff 100%
+      );
+      height: 320px;
+      width: 320px;
+      position: absolute;
+      top:-10px;
+      left:-10px;
+      z-index: -2;
+    }
+    .circle2 {
+      background-color: #010f1c;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+    }
+    .relax-pointer-container {
+      position: absolute;
+      top: -40px;
+      left: 140px;
+      width: 20px;
+      height: 190px;
+      animation: rotate 7.5s linear forwards infinite;
+      transform-origin: bottom center;
+    }
+    #relax-wrapper2.contain2-grow {
+      animation: grow 3s linear forwards;
+    }
+    #relax-wrapper2.contain2-shrink {
+      animation: shrink 3s linear forwards;
+    }
+    .relax-pointer {
+      background-color: #ffffff;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      display: block;
+    }
+    @keyframes rotate {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+    }
+    @keyframes grow {
+      from {
+          transform: scale(1);
+      }
+      to {
+          transform: scale(1.2);
+      }
+    }
+    @keyframes shrink {
+      from {
+          transform: scale(1.2);
+      }
+      to {
+          transform: scale(1);
+      }
+    }
+  /*AUTO BREATHING APP END*/
+  /*--------------------------------*/
+  /*AUDIO MODULE*/
+   /* #musicSelect {
+      /*display: flex;
+      flex-direction: column;
+    } */
+    /* #musicSelect > select {
+      border: none;
+      min-width: 300px;
+      font-size: 16px;
+      padding: 11px 4px;
+      background-color: #6666ff;
+      color: #fff;
+      align-self: center;
+    } */
+  
+    .music-text {
+      font-family: 'Fredoka', sans-serif;
+      text-align: center;
+      color: white;
+    }
+    
+    audio {
+      width: 180px;
+      height: 50px;
+      border:5px solid #9999ff;
+      border-radius: 50px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin: auto;
+    }
+    
+    .playergif {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      position: absolute;
+      margin-left: 35%;
+      margin-top: -5%;
+      border-radius: 50%;
+    }
+  
+  /*AUDIO MODULE END*/
+  /*--------------------------------*/
+
+  .popup-header{
+    background-color: lightblue;
+    text-align: center;
     padding: 10px;
-}
-  #topNavFlexbox > a:hover {
-    background-color: #c48aff;
-    border: thin #c48aff solid;
-    transition: 0.3s ease all;
+    font-size: 20px;
+    font-weight: bold;
+    display: grid;
   }
-/*NAVBAR END*/
-/*--------------------------------*/
-/*RELAX CONTAINER*/
-  #relaxContentsFlexbox {
+  
+  .wrapper{
+    margin: 50px;
+    gap : 15px;
+    display : grid;
+    grid-template-columns: repeat(auto-fill, 256px);
+  }
+  
+  .wrapper li{
+    list-style: none;
+    height: 250px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+  }
+  .add-box{
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .add-box, .icon, .bottom-content, .settings .menu li,
+  .popup{
     display: flex;
     align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
-
+    justify-content: space-between;
   }
-/*--------------------------------*/
-/*IMGS & GIFS*/
-  /*body {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-  }*/
-  /*
-  **ARMS X
-  LEGS
-  WHOLE BODY X
-  NECK
-  BACK
-  animated yoga, purple, background USED
-  https://cdn.dribbble.com/users/919329/screenshots/2796076/media/05715cb3ea596b61dea95dbdea228d40.gif
-  sunset beach, orange&black
-  https://static.wikia.nocookie.net/survivor-canadienne-org/images/8/8d/Sunset-Waves-960px.gif
-  animated yoga, purple, background
-  <iframe src="https://giphy.com/embed/3oKIPavRPgJYaNI97W" width="480" height="360" frameBorder="0" class="" allowFullScreen></iframe>
-  <a href="https://giphy.com/gifs/animation-yoga-exercise-3oKIPavRPgJYaNI97W"></a>
-  hover meditation, no background
-  https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Y0M2E4YmJkM2YwOGVkNjFmMWMzMzBiMTg1MTNjYzIyZWM1OGU4YyZjdD1z/xUA7bbcVDWik6cPdmg/giphy.gif
   
-  animated yoga, pink, no background, stiff anim **HAS WHITE OUTLINE
-  https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5bc49a55989429.599c07a9224c3.gif
-  animated yoga, mint, background
-  https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/34c52563799919.5abc9eb3f3f75.gif
-  */
-/*--------------------------------*/
-/*SLIDESHOW*/
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    box-sizing: border-box;
+  .add-box .icon{
+    height: 78px;
+    width: 78px;
+    color: #88ABFF;
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px dashed #88ABFF;
+    justify-content: center;
   }
-
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
+  
+  .add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    margin-top: 20px;
   }
-
-  /* Next & previous buttons */
-  .prev, .next {
+  
+  .wrapper .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .note p{
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .note span{
+    color: #575757;
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  
+  .note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;  
+  
+  }
+  
+  .bottom-content span{
+    color: #6d6d6d;
+    font-size: 13px;
+  }
+  
+  .bottom-content .settings i{
+    color: #6d6d6d;
+    font-size: 14px;
     cursor: pointer;
+  }
+  
+  .settings{
+    position: relative;
+  }
+  
+  .settings .menu{
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 0;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+  }
+  
+  .settings:hover .menu{
+    transform: scale(1);
+  }
+  
+  .settings .menu li{
+  height: 25px;
+  border-radius: 0;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-size: 15px;
+  padding:  17px 15px;
+  }
+  
+  
+  .menu li:hover{
+    background: #f5f5f5;
+  }
+  
+  .menu li i{
+    padding-right: 8px;
+  }
+  
+  /*pop up css*/
+  
+  .popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+  }
+  
+  .popup-box .popup{
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: grey;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-
-  /* Caption text */
-  .Slidetext {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
     width: 100%;
-    text-align: center;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+  }
+  
+  .popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  
+  .popup-box.show, .popup-box .popup{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .popup .content{
+    width: calc(100% - 15px);
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  .popup .content header{
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .content header p{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .content header i{
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .content form{
+    margin: 15px 25px 35px;
+  }
+  
+  .content form .row{
+    margin-bottom: 20px;
+  }
+  
+  form .row label{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+  .content form :where(input, textarea){
+    width: 100%;
+    height: 50px;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+  }
+  
+  .content form textarea{
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
+  }
+  
+  .content form button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #6a93f8;
   }
 
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+  /*-----------relaxer var1------------------*/
+
+  .container-breath {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+    margin-left: 70vh;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(1);
+  }
+  
+  .circle {
+    background-color: #083f72;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
     position: absolute;
     top: 0;
+    left: 0;
+    z-index: -1;
   }
   
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-/*--------------------------------*/
-/*BUTTON BREATHING APP*/
-.relax-input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  
-  .relax-input select {
-    border: none;
-    min-width: 300px;
-    font-size: 16px;
-    padding: 8px 4px;
-    background-color: #6666ff;
-    color: #fff;
-    align-self: center;
-  }
-  
-  .relax-input select:focus {
-    outline: none;
-  }
-  
-  .circle-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 40px;
-  }
-  
-  .circle-outline {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 15px solid #f1f1f1;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .circle-progress {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background-color: #6666ff;
-    border-radius: 50%;
-    transition: 4s ease all;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .circle-grow {
-    transform: scale(5.3);
-  }
-  
-  .breaths {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-    color:white;
-  }
-  
-  .instructions {
-    text-align: center;
-    margin-bottom: 35px;
-    color:white;
-  }
-  
-  button {
-    align-self: center;
-    padding: 8px 20px;
-    background-color: #6666ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease all;
-  }
-  
-  button:hover {
-    background-color: #f1f1f1;
-    color: #6666ff;
-  }
-  
-  .button-inactive {
-    pointer-events: none;
-    background-color: #969696;
-  }
-  #breath-select-disable {
-    pointer-events: none;
-    background-color: #969696;
-  }
-/*BUTTON BREATHING APP END*/
-/*--------------------------------*/
-/*AUTO BREATHING APP*/
-  #relax-wrapper2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 300px;
-    margin: auto;
-    margin-top: 0px;
-    position: relative;
-    transform: scale(1);      
-  }
-  #relaxText2 {
-    color: white;
-  }
-  .relax-gradient-circle {
-    border-radius: 50%;
-
+  .gradient-circle {
     background: conic-gradient(
-        #9999ff 0%,
-        #cc99ff 40%,
-        #ffffff 40%,
-        #ffffff 60%,
-        #99ccff 60%,
-        #6699ff 100%
+      #55b7a4 0%,
+      #4ca493 40%,
+      #fff 40%,
+      #fff 60%,
+      #336d62 60%,
+      #2a5b52 100%
     );
     height: 320px;
     width: 320px;
-    position: absolute;
-    top:-10px;
-    left:-10px;
     z-index: -2;
-  }
-  .circle2 {
-    background-color: #010f1c;
     border-radius: 50%;
-    height: 100%;
-    width: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
+    top: -10px;
+    left: -10px;
   }
-  .relax-pointer-container {
+  
+  .pointer {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+  }
+  
+  .pointer-container {
     position: absolute;
     top: -40px;
     left: 140px;
@@ -285,42 +658,89 @@
     animation: rotate 7.5s linear forwards infinite;
     transform-origin: bottom center;
   }
-  #relax-wrapper2.contain2-grow {
-    animation: grow 3s linear forwards;
-  }
-  #relax-wrapper2.contain2-shrink {
-    animation: shrink 3s linear forwards;
-  }
-  .relax-pointer {
-    background-color: #ffffff;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    display: block;
-  }
+  
   @keyframes rotate {
     from {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
+  
     to {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
+  
+  .container.grow {
+    animation: grow 3s linear forwards;
+  }
+  
   @keyframes grow {
     from {
-        transform: scale(1);
+      transform: scale(1);
     }
+  
     to {
-        transform: scale(1.2);
+      transform: scale(1.2);
     }
   }
+  
+  .container.shrink {
+    animation: shrink 3s linear forwards;
+  }
+  
   @keyframes shrink {
     from {
-        transform: scale(1.2);
+      transform: scale(1.2);
     }
+  
     to {
-        transform: scale(1);
+      transform: scale(1);
     }
   }
-/*AUTO BREATHING APP END*/
-/*--------------------------------*/
+
+
+  /*----------------------------------------------*/
+
+  .login-body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px,30px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0, .15);
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #cccccc;
+    height: 20vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /*----------------------------------------------*/
+
+  .register-body{
+    display: grid;
+    height: 35vh;
+    width: 400px;
+    padding: 20px,30px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0, .15);
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #cccccc;
+    position: absolute;
+    left: 40%;
+    top: 34%;
+    text-align: left;
+    
+  }
+  .registration-header{
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: lightblue;
+    text-align: center;
+  }
+  .registration-footer{
+    text-align: center;
+  }
+  label{
+    width: 200px;
+    display: inline-block;
+  }

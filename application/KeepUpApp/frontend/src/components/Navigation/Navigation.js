@@ -4,6 +4,10 @@ import avatar from '../../img/avatar.png'
 import { signout } from '../../utils/Icons'
 import { menuItems } from '../../utils/menuItems'
 
+
+/**
+ * Navigation of the Expense tracker
+ */
 function Navigation({active, setActive}) {
     
     return (

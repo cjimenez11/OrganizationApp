@@ -20,8 +20,15 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LOGOUT } from '../../../Redux/users/user.types';
+/**
+ * This is how we navigate through pages in react
+ * Every button links to a page
+ * 
+ * It is ontop of all our pages
+ * 
+ */
 
-export default function Navbar() {
+function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch()
@@ -35,33 +42,33 @@ export default function Navbar() {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box fontWeight={"bold"} cursor={"pointer"} onClick={()=>{
             nav("/")
-          }} color="white">Notes App</Box>
+          }} color="navy">Notes App</Box>
 
           <Flex alignItems={'center'}>
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/breathe")
-                }}>Breathing App</Button>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                }}>Relaxer</Button>
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/expenses")
                 }}>Expense Tracker</Button>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/notes")
-                }}>All Notes</Button>
-                <Button display={auth==true?"none":"block"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                }}>Notepad</Button>
+                <Button display={auth==true?"none":"block"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/register")
                 }}>Sign up</Button>
-                <Button display={auth==true?"none":"block"} bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"none":"block"} bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/login")
                 }}>Login</Button>
-              <Button bg={"yellow"} onClick={toggleColorMode}>
+              <Button bg={"plum"} onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
               <Menu>
                 <MenuButton
                   as={Button}
-                  border="2px solid yellow"
+                  border="2px solid plum"
                   padding={2}
                   rounded={'full'}
                   variant={'link'}
@@ -100,3 +107,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;

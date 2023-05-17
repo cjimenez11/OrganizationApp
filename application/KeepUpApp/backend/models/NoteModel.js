@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 
+/**
+ * Schema for the Note Model
+ * this includes how the note is stored in the database
+ */
 const noteSchema = mongoose.Schema(
   {
     title: { type: String, required: true },

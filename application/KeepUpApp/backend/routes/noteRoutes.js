@@ -1,11 +1,12 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { authenticator } = require("../middlewares/authenticator");
 const { NoteModel } = require("../models/NoteModel");
 
 const noteRouter = express.Router();
+//noteRouter.use(authenticator);
 
-//Gets all the notes from DB to displays them.
 
 noteRouter.get("/",async(req,res)=>{
     try {
@@ -24,9 +25,8 @@ noteRouter.get("/",async(req,res)=>{
     }
 })
 
-//Adds the notes input to the DB.
-
 noteRouter.post("/create",async(req,res)=>{
+
 
     try {
         let note = new NoteModel(req.body)
@@ -41,12 +41,13 @@ noteRouter.post("/create",async(req,res)=>{
             status:0
         })
     }
+
+
+
 })
 
-//Updates existing notes in the DB
 
 noteRouter.patch("/",async(req,res)=>{
-
     let {id} = req.headers
     try {
         await NoteModel.findByIdAndUpdate({_id:id},req.body)
@@ -63,10 +64,8 @@ noteRouter.patch("/",async(req,res)=>{
     
 })
 
-//Deletes existing notes from DB
 
 noteRouter.delete("/",async(req,res)=>{
-    
     let {id} = req.headers
     try {
         await NoteModel.findByIdAndDelete({_id:id})

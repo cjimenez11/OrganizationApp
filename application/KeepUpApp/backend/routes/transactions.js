@@ -3,7 +3,6 @@ const { addIncome, getIncomes, deleteIncome } = require('../controllers/income')
 
 const router = require('express').Router();
 
-//This function does all P1 features of Expense tracker i.e addind, displaying and deleting Expenses and Incomes.
 
 router.post('/add-income', addIncome)
     .get('/get-incomes', getIncomes)

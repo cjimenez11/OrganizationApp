@@ -47,8 +47,6 @@ function Expenses() {
     )
 }
 
-//Styling the Expense page.
-
 const ExpenseStyled = styled.div`
     display: flex;
     overflow: auto;

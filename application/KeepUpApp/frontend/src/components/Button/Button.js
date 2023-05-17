@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-//This function is exported to use the button in various functions (that import and use it) whenever a button is required instead of defining it each time.
+/**
+ * 
+ * @returns expenses added to the list 
+ */
 
 function Button({name, icon, onClick, bg, bPad, color, bRad}) {
     return (
@@ -16,8 +19,6 @@ function Button({name, icon, onClick, bg, bPad, color, bRad}) {
         </ButtonStyled>
     )
 }
-
-//Styling the button
 
 const ButtonStyled = styled.button`
     outline: none;

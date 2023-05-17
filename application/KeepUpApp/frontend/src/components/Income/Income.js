@@ -45,8 +45,6 @@ function Income() {
     )
 }
 
-//Styling income page.
-
 const IncomeStyled = styled.div`
     display: flex;
     overflow: auto;
