@@ -1,5 +1,5 @@
 import { Box, Button, Grid, IconButton, Input, Textarea, useDisclosure } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import NoteCard from "../components/Notespage/NoteCard/NoteCard";
 import { createNotes, getNotes } from "../Redux/notes/note.actions";
@@ -14,6 +14,8 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import Orb from "../components/Orb/Orb"
+
 export default function NotesPage() {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.noteReducer);
@@ -39,8 +41,13 @@ export default function NotesPage() {
     onClose()
   }
 
+  const orbMemo = useMemo(() => {
+    return <Orb />
+  },[])
+
   return (
     <Box mt={20} padding={8}>
+      {orbMemo}
       <Grid
         gap={10}
         w={"90%"}
@@ -61,7 +68,7 @@ export default function NotesPage() {
           w={"80px"}
           h={"80px"}
           borderRadius={50}
-          bg={"yellowgreen"}
+          bg={"plum"}
           bottom={0}
           right={0}
           onClick={onOpen}
@@ -76,6 +83,7 @@ export default function NotesPage() {
           finalFocusRef={finalRef}
           isOpen={isOpen}
           onClose={onClose}
+          background={"#f7f0fa"}
         >
           <ModalOverlay />
           <ModalContent>

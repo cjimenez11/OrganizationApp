@@ -3,18 +3,18 @@
     padding: 1rem;
     border: 1px solid #8d8d8d;
     border-radius: 10px;
-    color: #dadada;
+    color: navy;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color: plum;
     margin-top: 700px;
     margin-left: 550px;
 }
 .player_container > * {
     padding: 1rem 0;
-    color: #cacaca;
+    color: navy;
 }
 .player_container .title {
     font-size: inherit;

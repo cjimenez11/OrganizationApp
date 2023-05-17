@@ -23,7 +23,7 @@ export default function LoginPage(){
     const {auth,token,loading,error} = useSelector((state)=>state.userReducer)
     console.log(auth,token)
     if(auth){
-        nav("/notes")
+        nav("/expenses")
     }
 
     const [email,setEmail] =useState("")

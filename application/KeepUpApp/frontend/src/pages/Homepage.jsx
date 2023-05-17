@@ -1,41 +1,41 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { Navbar } from "../components/Homepage/Navbar";
 import note from "../assets/note.png";
+import Orb from "../components/Orb/Orb";
+import { useMemo } from "react";
 
 //This function contains all the details to be displayed on the homepage along with a brief description of the app.
 
 export default function Homepage() {
+  const orbMemo = useMemo(() => {
+    return <Orb />;
+  }, []);
   return (
     <Box padding={8}>
+      {orbMemo}
       <Image position={"absolute"} right={0} w={500} src={note} />
       <Heading mt={16} textAlign={"start"} size={"4xl"}>
         Note App
       </Heading>
       <Text mt={8} maxW={"50%"} textAlign={"justify"}>
-        A note application is a software program that allows users to create,
-        organize, and manage their digital notes. It is an essential tool for
-        anyone looking to streamline their daily tasks, increase productivity,
-        and stay organized. With its user-friendly interface and powerful
-        features, a note application is perfect for students, professionals, and
-        anyone who needs to keep track of their ideas, tasks, and goals. One of
-        the main features of a note application is its ability to create and
-        edit notes. Users can easily create notes, add text, images, and even
-        voice memos. They can organize their notes using tags or categories,
-        making it easier to find and access specific notes later on.
-        Additionally, a note application often includes powerful search
-        functionality, allowing users to quickly find the information they need.
-        Another useful feature of a note application is the ability to share
-        notes. Users can share their notes with colleagues, friends, or family
-        members, making collaboration on projects or ideas seamless. This is
-        especially useful for professionals who need to work on team projects or
-        students who want to collaborate on group assignments. Many note
-        applications also include advanced features like syncing across multiple
-        devices, making it easy to access and edit notes from anywhere. This
-        ensures that users always have access to their notes, no matter where
-        they are. Overall, a note application is an essential tool for anyone
-        looking to stay organized and productive. With its powerful features and
-        user-friendly interface, it is the perfect solution for anyone looking
-        to streamline their daily tasks and stay on top of their game.
+        Hello Guys!!! Welsome to the "Keep Up App". This app was developed by
+        Csc 648-Section04-Team01. {"\n"}
+        One major but common problem induced by the fast moving lifestyle is
+        stress and as a result, forgetfulness. We have too many things to be
+        done in our professional, personal and social lives parallelly everyday
+        that it is hard to rely solely on ones memory to keep a track of things.
+        Our application, “KeepUp – Keep up with your daily tasks, expenses and
+        stress”, provides a solution to this by allowing you to add necessary
+        notes, keep track of your income and expenditure. Our app not only helps
+        to keep up with daily activities but also helps to keep up with stress.
+        The relaxer feature guides the users on how various relaxation exercises
+        could be done anytime, anywhere to maintain calmness and be more
+        efficient during stressful times. Overall, the KeepUp application is a
+        one stop solution to three different but commonly encountered problems.
+        This is useful to almost all people irrespective of age, profession and
+        gender. The added advantage is that it is easy to use by those who
+        aren’t tech savvy as everything could be accessed with just one
+        click/tap.
       </Text>
     </Box>
   );

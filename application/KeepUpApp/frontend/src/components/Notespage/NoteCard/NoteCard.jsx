@@ -11,7 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import "./style.css";
-import notebg from "../../../assets/note_bg.png";
+import note_bg from "../../../../../frontend/src/assets/note_bg.png";
 import { useDispatch } from "react-redux";
 import { deleteNotes, updateNotes } from "../../../Redux/notes/note.actions";
 import {
@@ -43,7 +43,7 @@ export default function NoteCard({ title, body, _id }) {
   }
 
   return (
-    <Card backgroundImage={`url(${notebg})`}>
+    <Card background={`lavender`}>
       <CardBody>
         <VStack>
           <Heading>{title}</Heading>
@@ -51,7 +51,7 @@ export default function NoteCard({ title, body, _id }) {
 
           <Flex gap={2}>
             <>
-              <Button onClick={onOpen}>Update</Button>
+              <Button background={"plum"} color={"navy"} onClick={onOpen}>Update</Button>
 
               <Modal
                 initialFocusRef={initialRef}
@@ -61,7 +61,7 @@ export default function NoteCard({ title, body, _id }) {
               >
                 <ModalOverlay />
                 <ModalContent>
-                  <ModalHeader>Update Note</ModalHeader>
+                  <ModalHeader >Update Note</ModalHeader>
                   <ModalCloseButton />
                   <ModalBody pb={6}>
                     <Input
@@ -69,8 +69,10 @@ export default function NoteCard({ title, body, _id }) {
                       m
                       placeholder="Please enter title"
                       onChange={(e) => setTitle(e.target.value)}
+                      color={"navy"}
                     ></Input>
                     <Textarea
+                      color={"navy"}
                       mt={8}
                       value={tempBody}
                       placeholder={"Please enter description"}
@@ -91,6 +93,7 @@ export default function NoteCard({ title, body, _id }) {
               onClick={() => {
                 dispatch(deleteNotes(_id));
               }}
+              background={"plum"} color={"navy"}
             >
               Delete
             </Button>

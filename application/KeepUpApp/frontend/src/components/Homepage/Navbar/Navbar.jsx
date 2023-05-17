@@ -35,36 +35,36 @@ export default function Navbar() {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box fontWeight={"bold"} cursor={"pointer"} onClick={()=>{
             nav("/")
-          }} color="white">Notes App</Box>
+          }} color="navy">Notes App</Box>
 
           <Flex alignItems={'center'}>
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
-                    nav("/relaxer")
-                }}>Relaxer</Button>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
-                    nav("/exercise")
-                }}>Excercise</Button>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/expenses")
                 }}>Expense Tracker</Button>
-                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/notes")
                 }}>Notepad</Button>
-                <Button display={auth==true?"none":"block"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
+                    nav("/relaxer")
+                }}>Relaxer</Button>
+                <Button display={auth==true?"block":"none"}  bg={"plum"}m color={"navy"} onClick={()=>{
+                    nav("/exercise")
+                }}>Exercises</Button>
+                <Button display={auth==true?"none":"block"}  bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/register")
                 }}>Sign up</Button>
-                <Button display={auth==true?"none":"block"} bg={"yellow"}m color={"green"} onClick={()=>{
+                <Button display={auth==true?"none":"block"} bg={"plum"}m color={"navy"} onClick={()=>{
                     nav("/login")
-                }}>Login</Button>
-              <Button bg={"yellow"} onClick={toggleColorMode}>
+                }}>Sign in</Button>
+              <Button bg={"plum"} onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
               <Menu>
                 <MenuButton
                   as={Button}
-                  border="2px solid yellow"
+                  border="2px solid plum"
                   padding={2}
                   rounded={'full'}
                   variant={'link'}
