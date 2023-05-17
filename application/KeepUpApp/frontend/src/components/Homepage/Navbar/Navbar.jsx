@@ -40,8 +40,11 @@ export default function Navbar() {
           <Flex alignItems={'center'}>
             <Stack alignItems={"center"} direction={'row'} spacing={7}>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
-                    nav("/breathe")
+                    nav("/relaxer")
                 }}>Relaxer</Button>
+                <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
+                    nav("/exercise")
+                }}>Excercise</Button>
                 <Button display={auth==true?"block":"none"}  bg={"yellow"}m color={"green"} onClick={()=>{
                     nav("/expenses")
                 }}>Expense Tracker</Button>
